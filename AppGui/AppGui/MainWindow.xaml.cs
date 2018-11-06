@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using System.Xml.Linq;
 using mmisharp;
 using Newtonsoft.Json;
-
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium;
 namespace AppGui
 {
     /// <summary>
@@ -25,6 +23,10 @@ namespace AppGui
             mmiC.Message += MmiC_Message;
             mmiC.Start();
 
+            IWebDriver driver = new FirefoxDriver();
+            driver = new FirefoxDriver(Environment.CurrentDirectory);
+            driver.Url = "http://www.demoqa.com";
+
         }
 
         private void MmiC_Message(object sender, MmiEventArgs e)
@@ -33,7 +35,7 @@ namespace AppGui
             var doc = XDocument.Parse(e.Message);
             var com = doc.Descendants("command").FirstOrDefault().Value;
             dynamic json = JsonConvert.DeserializeObject(com);
-
+            /*
             Shape _s = null;
             switch ((string)json.recognized[0].ToString())
             {
@@ -66,6 +68,7 @@ namespace AppGui
                         break;
                 }
             });
+            */
             
 
 
