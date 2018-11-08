@@ -4,30 +4,39 @@
 	  <item>
 		  <item>
 			<ruleref uri="#object"/>
-			<tag>out.shape=rules.latest();</tag>
-		  </item>
-		  <item>
-			<ruleref uri="#color"/>
-			<tag>out.color=rules.latest();</tag>
+			<tag>out.sentence=rules.latest();</tag>
 		  </item>
 	  </item>
 	</rule>
-	<rule id="object">
-	  <one-of>
-		<item>quadrado<tag>out="SQUARE"</tag></item>
-		<item>círculo<tag>out="CIRCLE"</tag></item>
-		<item>triângulo<tag>out="TRIANGLE"</tag></item>
-	  </one-of>
-	</rule>
-	<rule id="color">
-	  <one-of>
-		<item>verde<tag>out="GREEN"</tag></item>
-		<item>azul<tag>out="BLUE"</tag></item>
-    <item>amarelo<tag>out="YELLOW"</tag></item>
+  <rule id="object">
+    <one-of>
       <item>
-        preto<tag>out="BLACK"</tag>
+        Novo Separador<tag>out="NEW_TAB"</tag>
       </item>
-		<item>vermelho<tag>out="RED"</tag></item>
-	  </one-of>
-	</rule>
+      <item>
+        Sinónimo de tentar<tag>out="SEARCH"</tag>
+      </item>
+      <item>
+        Não vejo nada<tag>out="ZOOM_IN"</tag>
+      </item>
+      <item>
+        Está demasiado grande<tag>out="ZOOM_OUT"</tag>
+      </item>
+      <item>
+        Mais para cima <tag>out="SCROLL_UP"</tag>
+      </item>
+      <item>
+        Mais para baixo <tag>out="SCROLL_DOWN"</tag>
+      </item>
+      <item>
+        Fim da página <tag>out="BOTTOM"</tag>
+      </item>
+      <item>
+        Inicío da página <tag>out="TOP"</tag>
+      </item>
+      <item>
+        Vou embora <tag>out="CLOSE_CHROME"</tag>
+      </item>
+    </one-of>
+  </rule>
 </grammar>

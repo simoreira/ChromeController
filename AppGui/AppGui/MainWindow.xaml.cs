@@ -48,8 +48,7 @@ namespace AppGui
             IWebDriver = new ChromeDriver(Environment.CurrentDirectory);
             IWebDriver.Manage().Window.Maximize();
             IWebDriver.Url = defaultUrl;
-            changeInitialPage("http://www.facebook.com");
-            NewTab(TabName());        }
+        }
 
         private void QuitChrome()
         {
@@ -174,20 +173,38 @@ namespace AppGui
             var com = doc.Descendants("command").FirstOrDefault().Value;
             dynamic json = JsonConvert.DeserializeObject(com);
 
-            Shape _s = null;
             switch ((string)json.recognized[0].ToString())
             {
-                case "SQUARE":
-                    _s = rectangle;
+                case "NEW_TAB":
+                    NewTab(TabName());
                     break;
-                case "CIRCLE":
-                    _s = circle;
+                case "SEARCH":
+                    Search();
                     break;
-                case "TRIANGLE":
-                    _s = triangle;
+                case "ZOOM_IN":
+                    ZoomIn();
+                    break;
+                case "ZOOM_OUT":
+                    ZoomOut();
+                    break;
+                case "SCROLL_UP":
+                    ScrollUp();
+                    break;
+                case "SCROLL_DOWN":
+                    ScrollDown();
+                    break;
+                case "BOTTOM":
+                    ScrollBottom();
+                    break;
+                case "TOP":
+                    ScrollTop();
+                    break;
+                case "CLOSE_CHROME":
+                    QuitChrome();
                     break;
             }
 
+            /*
             App.Current.Dispatcher.Invoke(() =>
             {
                 switch ((string)json.recognized[1].ToString())
@@ -209,6 +226,7 @@ namespace AppGui
                         break;
                 }
             });
+            */
 
 
 
