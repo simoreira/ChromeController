@@ -7,8 +7,8 @@ using System.Windows.Shapes;
 using System.Xml.Linq;
 using mmisharp;
 using Newtonsoft.Json;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
 namespace AppGui
@@ -23,26 +23,26 @@ namespace AppGui
         private MmiCommunication mmiC;
         private double ZoomValue = 100;
         private double ZoomIncrement = 10;
+        private int scrollIncrement = 200;
         private IWebDriver driver;
         private IJavaScriptExecutor js;
         public MainWindow()
         {
 
             InitializeComponent();
-            InitializeFirefox();
+            InitializeChrome();
 
             mmiC = new MmiCommunication("localhost", 8000, "User1", "GUI");
             mmiC.Message += MmiC_Message;
             mmiC.Start();
-
         }
 
-        private void InitializeFirefox()
+        private void InitializeChrome()
         {
             driver = new ChromeDriver(Environment.CurrentDirectory);
             driver.Manage().Window.Maximize();
             driver.Url = "http://www.github.com";
-            Search();
+            //Search();
 
         }
 
@@ -50,8 +50,6 @@ namespace AppGui
         {
             ZoomValue += ZoomIncrement;
             Zoom(ZoomValue);
-
-
         }
 
         private void ZoomOut()
@@ -100,7 +98,29 @@ namespace AppGui
                 }
             }
             actions.MoveToElement(feelingLuckyButton).Click().Perform();
+        }
 
+
+
+        //Scroll down of the page
+        private void ScrollDown()
+        {
+            js.ExecuteScript(String.Format("window.scrollTo(0,{0});", scrollIncrement));
+        }
+
+        private void ScrollUp()
+        {
+            js.ExecuteScript(String.Format("window.scrollBy(0,{0})", -scrollIncrement));
+        }
+
+        private void ScrollTop()
+        {
+            js.ExecuteScript("window.scrollTo(0, 0);");
+        }
+
+        private void ScrollBottom()
+        {
+            js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
         }
 
         private void MmiC_Message(object sender, MmiEventArgs e)
