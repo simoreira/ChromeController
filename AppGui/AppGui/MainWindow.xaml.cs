@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Windows;
@@ -26,6 +28,9 @@ namespace AppGui
         private int scrollIncrement = 200;
         private IWebDriver driver;
         private IJavaScriptExecutor js;
+        private ArrayList tabs = new ArrayList();
+        private int tabCounter = 1;
+
         public MainWindow()
         {
 
@@ -42,8 +47,33 @@ namespace AppGui
             driver = new ChromeDriver(Environment.CurrentDirectory);
             driver.Manage().Window.Maximize();
             driver.Url = "http://www.github.com";
-            //Search();
+        }
 
+        private void QuitChrome()
+        {
+            tabs.Clear();
+            tabCounter = 1;
+            driver.Quit();
+        }
+
+        private void CloseTab() {
+            driver.Close();
+        }
+        private void NewTab(string tabName) 
+        {
+            js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.open('http://www.google.pt'," + "'"+ tabName +"'" +");");
+            tabs.Add(tabName);
+            driver.SwitchTo().Window(tabName);
+        }
+
+        private String TabName()
+        {
+            while (tabs.Contains("tab" + tabCounter))
+            {
+                tabCounter++;
+            }
+            return "tab" + tabCounter;
         }
 
         private void ZoomIn()
@@ -67,9 +97,8 @@ namespace AppGui
 
         private void Search()
         {
+            NewTab(TabName());
             js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.open('http://www.google.pt', 'newtab');");
-            driver.SwitchTo().Window("newtab");
             IWebElement search = driver.FindElement(By.Name("q"));
             search.SendKeys("sinónimos de bolacha");
             Actions actions = new Actions(driver);
