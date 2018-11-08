@@ -26,10 +26,11 @@ namespace AppGui
         private double ZoomValue = 100;
         private double ZoomIncrement = 10;
         private int scrollIncrement = 200;
-        private IWebDriver driver;
+        private IWebDriver IWebDriver;
         private IJavaScriptExecutor js;
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
+        private String defaultUrl = "http://www.google.pt";
 
         public MainWindow()
         {
@@ -44,29 +45,43 @@ namespace AppGui
 
         private void InitializeChrome()
         {
-            driver = new ChromeDriver(Environment.CurrentDirectory);
-            driver.Manage().Window.Maximize();
-            driver.Url = "http://www.github.com";
-        }
+            IWebDriver = new ChromeDriver(Environment.CurrentDirectory);
+            IWebDriver.Manage().Window.Maximize();
+            IWebDriver.Url = defaultUrl;
+            changeInitialPage("http://www.facebook.com");
+            NewTab(TabName());        }
 
         private void QuitChrome()
         {
             tabs.Clear();
             tabCounter = 1;
-            driver.Quit();
+            IWebDriver.Quit();
         }
 
+        private void changeInitialPage(String url)
+        {
+            defaultUrl = url;
+            Console.WriteLine(defaultUrl);
+        }
         private void CloseTab() {
-            driver.Close();
+            IWebDriver.Close();
         }
         private void NewTab(string tabName) 
         {
-            js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.open('http://www.google.pt'," + "'"+ tabName +"'" +");");
+            js = (IJavaScriptExecutor)IWebDriver;
+            js.ExecuteScript("window.open("+"'"+ defaultUrl +"'" + "," + "'"+ tabName +"');");
             tabs.Add(tabName);
-            driver.SwitchTo().Window(tabName);
+            IWebDriver.SwitchTo().Window(tabName);
         }
 
+        private void OpenIncognitoTab()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--incognito");
+            IWebDriver driver2 = new ChromeDriver(Environment.CurrentDirectory, options);
+            driver2.Url=defaultUrl;
+
+        }
         private String TabName()
         {
             while (tabs.Contains("tab" + tabCounter))
@@ -90,7 +105,7 @@ namespace AppGui
 
         private void Zoom(double level)
         {
-            js = (IJavaScriptExecutor)driver;
+            js = (IJavaScriptExecutor)IWebDriver;
             Console.WriteLine(level.ToString().Replace(',', '.'));
             js.ExecuteScript(string.Format("document.body.style.zoom='{0}%'", level.ToString().Replace(',', '.')));
         }
@@ -98,24 +113,24 @@ namespace AppGui
         private void Search()
         {
             NewTab(TabName());
-            js = (IJavaScriptExecutor)driver;
-            IWebElement search = driver.FindElement(By.Name("q"));
+            js = (IJavaScriptExecutor)IWebDriver;
+            IWebElement search = IWebDriver.FindElement(By.Name("q"));
             search.SendKeys("sinónimos de bolacha");
-            Actions actions = new Actions(driver);
+            Actions actions = new Actions(IWebDriver);
             IWebElement feelingLuckyButton = null;
             for (int i = 2; i < 12; i++)
             {
 
                 try
                 {
-                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li[" + i + "]/div/span[2]/span/input"));
+                    feelingLuckyButton = IWebDriver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li[" + i + "]/div/span[2]/span/input"));
                 }
                 catch (Exception)
                 {
                 }
                 if (feelingLuckyButton == null && i == 11)
                 {
-                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[3]/center/input[2]"));
+                    feelingLuckyButton = IWebDriver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[3]/center/input[2]"));
                 }
                 else if (feelingLuckyButton == null)
                 {
