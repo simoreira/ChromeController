@@ -39,7 +39,7 @@
       <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
     </Reference>
     <Reference Include="mmisharp">
-      <HintPath>..\..\mmisharp\mmisharp\bin\Debug\mmisharp.dll</HintPath>
+      <HintPath>..\..\mmisharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -100,6 +100,7 @@
     </None>
     <Content Include="ptG.grxml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
