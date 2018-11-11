@@ -1,12 +1,9 @@
 ﻿using System;
-
-
 using Microsoft.Speech.Recognition;
 
 
 class SpeechRecognizer
-{
-
+{ 
     private SpeechRecognitionEngine sr;
 
     /*
@@ -15,41 +12,23 @@ class SpeechRecognizer
      * 
      * @param GName - grammar file name
      */
-    public SpeechRecognizer(string GName)
+    public SpeechRecognizer()
     {
+        
         //creates the speech recognizer engine
         sr = new SpeechRecognitionEngine();
         sr.SetInputToDefaultAudioDevice();
 
-
-        Grammar gr = null;
-
-        //verifies if file exist, and loads the Grammar file, else load defualt grammar
-        if (System.IO.File.Exists(GName))
-        {
-
-            gr = new Grammar(GName);
-            gr.Enabled = true;
-
-            Console.WriteLine("Grammar Loaded");
-        }
-        else
-        {
-            GrammarBuilder gb = new GrammarBuilder(new Choices("texto", "aula"));
-            gb.Culture = sr.RecognizerInfo.Culture;
-
-            gr = new Grammar(gb);
-
-            Console.WriteLine("Loaded default grammar");
-
-        }
+        
+        Grammar gr = CreateGrammar();
 
         //load Grammar to speech engine
         sr.LoadGrammar(gr);
-
+        
         //assigns a method, to execute when speech is recognized
         sr.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(SpeechRecognized);
-
+        sr.RecognizeAsync(RecognizeMode.Multiple);
+        Console.WriteLine("Starting Asynchronous speech recognition...");
     }
 
     /*
@@ -59,14 +38,28 @@ class SpeechRecognizer
      * 
      * 
     */
-    private void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+    public void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
     {
         //gets recognized text
         string text = e.Result.Text;
 
         Console.WriteLine(text);
-
-
     }
+
+
+    private Grammar CreateGrammar()
+    {
+        Choices confirm = new Choices(new string[] { "sim" });
+        SemanticResultValue confirmClose = new SemanticResultValue(confirm, "sim");
+
+        Choices f = new Choices();
+        f.Add(confirmClose);
+        GrammarBuilder fGrammar = (GrammarBuilder)f;
+
+        Grammar g = new Grammar((GrammarBuilder)fGrammar);
+        return g;
+    }
+
+
 
 }

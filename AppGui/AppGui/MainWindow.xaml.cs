@@ -12,6 +12,8 @@ using Newtonsoft.Json;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using Microsoft.Speech.Recognition;
+using OpenQA.Selenium.Support.UI;
 
 namespace AppGui
 {
@@ -31,9 +33,13 @@ namespace AppGui
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
         private String defaultUrl = "http://www.google.pt";
+        private Tts tts;
 
+        private SpeechRecognitionEngine sr;
         public MainWindow()
         {
+            tts = new Tts();
+            SpeechRecognizer();
 
             InitializeComponent();
             InitializeChrome();
@@ -142,9 +148,6 @@ namespace AppGui
             actions.MoveToElement(feelingLuckyButton).Click().Perform();
         }
 
-
-
-        //Scroll down of the page
         private void ScrollDown()
         {
             js.ExecuteScript(String.Format("window.scrollBy(0,{0});", scrollIncrement));
@@ -165,6 +168,72 @@ namespace AppGui
             js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
         }
 
+        public void SpeechRecognizer()
+        {
+
+            //creates the speech recognizer engine
+            sr = new SpeechRecognitionEngine();
+            sr.SetInputToDefaultAudioDevice();
+
+
+            Grammar gr = CreateGrammar();
+
+            //load Grammar to speech engine
+            sr.LoadGrammar(gr);
+
+            //assigns a method, to execute when speech is recognized
+            sr.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(SpeechRecognized);
+            sr.RecognizeAsync(RecognizeMode.Multiple);
+            Console.WriteLine("Starting Asynchronous speech recognition...");
+        }
+
+        /*
+         * SpeechRecognized
+         * 
+         * EventHandler
+         * 
+         * 
+        */
+        public void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            //gets recognized text
+            string text = e.Result.Text;
+            Thread t = new Thread(Chromehandler);
+            t.Start(e);
+            Console.WriteLine(text);
+        }
+
+
+        private Grammar CreateGrammar()
+        {
+            Choices confirm = new Choices(new string[] { "sim" });
+            SemanticResultValue confirmClose = new SemanticResultValue(confirm, "sim");
+
+            Choices f = new Choices();
+            f.Add(confirmClose);
+            GrammarBuilder fGrammar = (GrammarBuilder)f;
+
+            Grammar g = new Grammar((GrammarBuilder)fGrammar);
+            return g;
+        }
+
+        private void Chromehandler(object obj)
+        {
+            SpeechRecognizedEventArgs e = (SpeechRecognizedEventArgs)obj;
+            //string originalText = e.Result.Text;
+            string semantic = (string)e.Result.Semantics.Value;
+
+            if (e.Result.Confidence > 0.75)
+            {
+                switch (semantic)
+                {
+                    case "sim":
+                        QuitChrome();
+                        break;
+
+                }
+            }
+        }
 
         private void MmiC_Message(object sender, MmiEventArgs e)
         {
@@ -200,7 +269,8 @@ namespace AppGui
                     ScrollTop();
                     break;
                 case "CLOSE_CHROME":
-                    QuitChrome();
+                    tts.Speak("Tem a certeza?");
+                    //QuitChrome();
                     break;
             }
 
