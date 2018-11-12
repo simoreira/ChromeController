@@ -6,8 +6,280 @@
 			<ruleref uri="#object"/>
 			<tag>out.sentence=rules.latest();</tag>
 		  </item>
+      <item>
+        <ruleref uri="#yes">
+          <tag>out.confirmationRule="yes";</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#no">
+          <tag>out.confirmationRule="no";</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#scroll">
+          <tag>out.directionRule=rules.directionRule;</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#zoom">
+          <tag>out.moreOrLessRule=rules.moreOrLessRule;</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#search">
+          <tag>out.queryRule=rules.queryRule;</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#quitChrome">
+          <tag>out.quitRule=rules.quitChromeRule;</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#newTab">
+          <tag>out.newTabRule=rules.newTabRule;</tag>
+        </ruleref>
+      </item>
+      <item>
+        <ruleref uri="#openIncognito">
+          <tag>out.openIncognitoRule=rules.openIncognitoRule;</tag>
+        </ruleref>
+      </item>
 	  </item>
 	</rule>
+  <rule id="yes">
+    <one-of>
+      <item>sim</item>
+      <item>ya</item>
+      <item>afirmativo</item>
+      <item>pode ser</item>
+      <item>correto</item>
+      <item>yap</item>
+      <item>positivo</item>
+      <item>com certeza</item>
+      <item>de acordo</item>
+      <item>isso</item>
+      <item>ok</item>
+      <item>
+        <item>está</item>
+        <one-of>
+          <item>bem</item>
+          <item>certo</item>
+          <item>ok</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="no">
+    <one-of>
+      não
+      <item repeat="0-1">
+        <one-of>
+          <item>pode ser</item>
+          <item>quero</item>
+        </one-of>
+      </item>
+      <item>nope</item>
+      <item>negativo</item>
+      <item>jamais</item>
+      <item>rejeito</item>
+      <item>incorreto</item>
+      <item>nada disso</item>
+    </one-of>
+  </rule>
+  <rule id="directionRule">
+    <one-of>
+      <item>para cima</item>
+      <item>para baixo</item>
+      <item>subir</item>
+      <item>descer</item>
+      <item>
+        <item>sobe</item>
+        <one-of>
+          <item>um pouco</item>
+          <item>muito</item>
+        </one-of>
+      </item>
+      <item>
+        <item>desce</item>
+        <one-of>
+          <item>um pouco</item>
+          <item>muito</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="moreOrLessRule">
+    <one-of>
+      <item>
+        <item>vejo</item>
+        <one-of>
+          <item>mal</item>
+          <item>bem</item>
+          <item>muito</item>
+          <item>pouco</item>
+          <item>nada</item>
+          <item>demasiado</item>
+        </one-of>
+      </item>
+      <item>
+        <item>aumenta</item>
+        <one-of>
+          <item>um pouco</item>
+          <item>muito</item>
+          <item>a letra</item>
+          <item>imagem</item>
+          <item>página</item>
+          <item>zoom</item>
+        </one-of>
+      </item>
+      <item>
+        <item>diminui</item>
+        <one-of>
+          <item>um pouco</item>
+          <item>muito</item>
+          <item>a letra</item>
+          <item>imagem</item>
+          <item>página</item>
+          <item>zoom</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="queryRule">
+    <one-of>
+      <item>
+        <item>Significado de</item>
+        <one-of>
+          <item>freio</item>
+          <item>esgrima</item>
+          <item>confúcio</item>
+          <item>faces</item>
+          <item>palha</item>
+          <item>colisão</item>
+          <item>travesseiro</item>
+          <item>soluço</item>
+          <item>felino</item>
+          <item>rena</item>
+        </one-of>
+      </item>
+      <item>
+        <item>o que</item>
+        <one-of>
+          <item>é</item>
+          <item>quer dizer</item>
+        </one-of>
+        <one-of>
+          <item>um</item>
+          <item>uma</item>
+          <item>o</item>
+          <item>a</item>
+          <item>freio</item>
+          <item>esgrima</item>
+          <item>confúcio</item>
+          <item>faces</item>
+          <item>palha</item>
+          <item>colisão</item>
+          <item>travesseiro</item>
+          <item>soluço</item>
+          <item>felino</item>
+          <item>rena</item>
+        </one-of>
+        <one-of>
+          <item>freio</item>
+          <item>esgrima</item>
+          <item>confúcio</item>
+          <item>faces</item>
+          <item>palha</item>
+          <item>colisão</item>
+          <item>travesseiro</item>
+          <item>soluço</item>
+          <item>felino</item>
+          <item>rena</item>
+        </one-of>
+      </item>
+      <item>
+        <item>Sinónimo de</item>
+        <one-of>
+          <item>freio</item>
+          <item>esgrima</item>
+          <item>confúcio</item>
+          <item>faces</item>
+          <item>palha</item>
+          <item>colisão</item>
+          <item>travesseiro</item>
+          <item>soluço</item>
+          <item>felino</item>
+          <item>rena</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="quitChromeRule">
+    <one-of>
+      <item>sai</item>
+      <item>sair</item>
+      <item>fecha tudo</item>
+      <item>
+        <item>vou</item>
+        <one-of>
+          <item>sair</item>
+          <item>embora</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="newTabRule">
+    <one-of>
+      <item>
+        <one-of>
+          <item>separador</item>
+          <item>aba</item>
+          <item>tab</item>
+        </one-of>
+        <item>novo</item>
+      </item>
+      <item>
+        <one-of>
+          <item>abre</item>
+          <item>lança</item>
+          <item>novo</item>
+        </one-of>
+        <one-of>
+          <item>separador</item>
+          <item>aba</item>
+          <item>tab</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="openIncognitoRule">
+    <one-of>
+      <item>
+        <one-of>
+          <item>separador</item>
+          <item>aba</item>
+          <item>tab</item>
+        </one-of>
+        <item>novo</item>
+      </item>
+      <item>
+        <one-of>
+          <item>abre</item>
+          <item>lança</item>
+          <item>novo</item>
+        </one-of>
+        <one-of>
+          <item>separador</item>
+          <item>aba</item>
+          <item>tab</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+
+
   <rule id="object">
     <one-of>
       <item>
