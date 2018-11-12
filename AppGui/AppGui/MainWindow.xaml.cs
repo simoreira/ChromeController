@@ -50,7 +50,8 @@ namespace AppGui
             driver = new ChromeDriver(Environment.CurrentDirectory);
             driver.Manage().Window.Maximize();
             driver.Url = defaultUrl;
-            Search("olá");
+            searchSynonyms("comida");
+            SearchTextInPage("sajsdah");
         }
 
         private void QuitChrome()
@@ -58,6 +59,13 @@ namespace AppGui
             tabs.Clear();
             tabCounter = 1;
             driver.Quit();
+        }
+
+        private void SearchTextInPage(string text)
+        {
+            IWebElement body = driver.FindElement(By.TagName("body"));
+            Console.WriteLine(body.Text.Contains(text));
+
         }
 
         private void changeInitialPage(String url)
