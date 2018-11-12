@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Windows;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using System.Xml.Linq;
 using mmisharp;
 using Newtonsoft.Json;
@@ -13,7 +10,6 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using Microsoft.Speech.Recognition;
-using OpenQA.Selenium.Support.UI;
 
 namespace AppGui
 {
@@ -33,13 +29,13 @@ namespace AppGui
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
         private String defaultUrl = "http://www.google.pt";
-        private Tts tts;
+        //private Tts tts;
 
         private SpeechRecognitionEngine sr;
         public MainWindow()
         {
-            tts = new Tts();
-            SpeechRecognizer();
+            //tts = new Tts();
+            //SpeechRecognizer();
 
             InitializeComponent();
             InitializeChrome();
@@ -54,6 +50,7 @@ namespace AppGui
             driver = new ChromeDriver(Environment.CurrentDirectory);
             driver.Manage().Window.Maximize();
             driver.Url = defaultUrl;
+            Search("olá");
         }
 
         private void QuitChrome()
@@ -114,12 +111,12 @@ namespace AppGui
             Console.WriteLine(level.ToString().Replace(',', '.'));
             js.ExecuteScript(string.Format("document.body.style.zoom='{0}%'", level.ToString().Replace(',', '.')));
         }
-        private void Search()
+        private void searchSynonyms(string word)
         {
             NewTab(TabName());
             js = (IJavaScriptExecutor)driver;
             IWebElement search = driver.FindElement(By.Name("q"));
-            search.SendKeys("sinónimos de bolacha");
+            search.SendKeys("sinónimos de " + word);
             Actions actions = new Actions(driver);
             IWebElement feelingLuckyButton = null;
             for (int i = 2; i < 12; i++)
@@ -148,6 +145,39 @@ namespace AppGui
             actions.MoveToElement(feelingLuckyButton).Click().Perform();
         }
 
+        private void Search(string sentence)
+        {
+            NewTab(TabName());
+            js = (IJavaScriptExecutor)driver;
+            IWebElement search = driver.FindElement(By.Name("q"));
+            search.SendKeys(sentence);
+            Actions actions = new Actions(driver);
+            IWebElement searchButton = null;
+            for (int i = 2; i < 12; i++)
+            {
+
+                try
+                {
+                    searchButton = driver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li["+ i +"]/div/span[1]/span/input"));
+                }
+                catch (Exception)
+                {
+                }
+                if (searchButton == null && i == 11)
+                {
+                    searchButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[3]/center/input[1]"));
+                }
+                else if (searchButton == null)
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            actions.MoveToElement(searchButton).Click().Perform();
+        }
         private void ScrollDown()
         {
             js.ExecuteScript(String.Format("window.scrollBy(0,{0});", scrollIncrement));
@@ -168,6 +198,7 @@ namespace AppGui
             js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
         }
 
+        /*
         public void SpeechRecognizer()
         {
 
@@ -186,6 +217,7 @@ namespace AppGui
             sr.RecognizeAsync(RecognizeMode.Multiple);
             Console.WriteLine("Starting Asynchronous speech recognition...");
         }
+        */
 
         /*
          * SpeechRecognized
@@ -248,7 +280,7 @@ namespace AppGui
                     NewTab(TabName());
                     break;
                 case "SEARCH":
-                    Search();
+                    //Search();
                     break;
                 case "ZOOM_IN":
                     ZoomIn();
@@ -269,7 +301,7 @@ namespace AppGui
                     ScrollTop();
                     break;
                 case "CLOSE_CHROME":
-                    tts.Speak("Tem a certeza?");
+                    //tts.Speak("Tem a certeza?");
                     //QuitChrome();
                     break;
             }
