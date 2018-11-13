@@ -94,7 +94,8 @@ namespace AppGui
             defaultUrl = url;
             Console.WriteLine(defaultUrl);
         }
-        private void CloseTab() {
+        private void CloseTab()
+        {
             driver.Close();
         }
 
@@ -113,10 +114,10 @@ namespace AppGui
             driver.Navigate().Forward();
         }
 
-        private void NewTab(string tabName, string url) 
+        private void NewTab(string tabName, string url)
         {
             js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.open("+"'"+ defaultUrl +"'" + "," + "'"+ tabName +"');");
+            js.ExecuteScript("window.open(" + "'" + defaultUrl + "'" + "," + "'" + tabName + "');");
             tabs.Add(tabName);
             driver.SwitchTo().Window(tabName);
             driver.Url = url;
@@ -127,7 +128,7 @@ namespace AppGui
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--incognito");
             IWebDriver driver2 = new ChromeDriver(Environment.CurrentDirectory, options);
-            driver2.Url=defaultUrl;
+            driver2.Url = defaultUrl;
 
         }
         private String TabName()
@@ -204,7 +205,7 @@ namespace AppGui
 
                 try
                 {
-                    searchButton = driver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li["+ i +"]/div/span[1]/span/input"));
+                    searchButton = driver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li[" + i + "]/div/span[1]/span/input"));
                 }
                 catch (Exception)
                 {
