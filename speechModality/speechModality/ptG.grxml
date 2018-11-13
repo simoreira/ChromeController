@@ -3,8 +3,8 @@
   <rule id="rootRule" scope="public">
     <item>
       <item>
-      <ruleref uri="#object">
-        <tag>out.sentence=rules.latest();</tag>
+        <ruleref uri="#object">
+          <tag>out.sentence=rules.latest();</tag>
         </ruleref>
       </item>
       <item>
