@@ -50,8 +50,29 @@ namespace AppGui
             driver = new ChromeDriver(Environment.CurrentDirectory);
             driver.Manage().Window.Maximize();
             driver.Url = defaultUrl;
-            searchSynonyms("comida");
-            SearchTextInPage("sajsdah");
+            Search("ola entao ta tudo crl");
+            ClickOnResults();
+        }
+
+        private void OpenDownloads()
+        {
+            NewTab(TabName(), "chrome://downloads/");
+
+        }
+
+        private void OpenSettings()
+        {
+            NewTab(TabName(), "chrome://settings/");
+        }
+
+        private void Minimize()
+        {
+            driver.Manage().Window.Minimize();
+        }
+
+        private void Maximize()
+        {
+            driver.Manage().Window.Maximize();
         }
 
         private void QuitChrome()
@@ -76,12 +97,29 @@ namespace AppGui
         private void CloseTab() {
             driver.Close();
         }
-        private void NewTab(string tabName) 
+
+        private void Refresh()
+        {
+            driver.Navigate().Refresh();
+        }
+
+        private void GoBack()
+        {
+            driver.Navigate().Back();
+        }
+
+        private void GoForward()
+        {
+            driver.Navigate().Forward();
+        }
+
+        private void NewTab(string tabName, string url) 
         {
             js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.open("+"'"+ defaultUrl +"'" + "," + "'"+ tabName +"');");
             tabs.Add(tabName);
             driver.SwitchTo().Window(tabName);
+            driver.Url = url;
         }
 
         private void OpenIncognitoTab()
@@ -121,7 +159,7 @@ namespace AppGui
         }
         private void searchSynonyms(string word)
         {
-            NewTab(TabName());
+            NewTab(TabName(), defaultUrl);
             js = (IJavaScriptExecutor)driver;
             IWebElement search = driver.FindElement(By.Name("q"));
             search.SendKeys("sinónimos de " + word);
@@ -155,7 +193,7 @@ namespace AppGui
 
         private void Search(string sentence)
         {
-            NewTab(TabName());
+            NewTab(TabName(), defaultUrl);
             js = (IJavaScriptExecutor)driver;
             IWebElement search = driver.FindElement(By.Name("q"));
             search.SendKeys(sentence);
@@ -285,7 +323,7 @@ namespace AppGui
             switch ((string)json.recognized[0].ToString())
             {
                 case "NEW_TAB":
-                    NewTab(TabName());
+                    NewTab(TabName(), defaultUrl);
                     break;
                 case "SEARCH":
                     //Search();
