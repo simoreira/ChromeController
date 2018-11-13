@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0"?>
 <grammar xml:lang="pt-PT" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
-	<rule id="rootRule" scope="public">
-	  <item>
-		  <item>
-			<ruleref uri="#object"/>
-			<tag>out.sentence=rules.latest();</tag>
-		  </item>
+  <rule id="rootRule" scope="public">
+    <item>
+      <item>
+      <ruleref uri="#object">
+        <tag>out.sentence=rules.latest();</tag>
+        </ruleref>
+      </item>
       <item>
         <ruleref uri="#yes">
           <tag>out.confirmationRule="yes";</tag>
@@ -46,8 +47,8 @@
           <tag>out.openIncognitoRule=rules.openIncognitoRule;</tag>
         </ruleref>
       </item>
-	  </item>
-	</rule>
+    </item>
+  </rule>
   <rule id="yes">
     <one-of>
       <item>sim</item>
@@ -62,11 +63,13 @@
       <item>isso</item>
       <item>ok</item>
       <item>
-        <item>está</item>
         <one-of>
-          <item>bem</item>
-          <item>certo</item>
-          <item>ok</item>
+          está
+          <item repeat="0-1">
+            <item>bem</item>
+            <item>certo</item>
+            <item>ok</item>
+          </item>
         </one-of>
       </item>
     </one-of>
@@ -95,17 +98,21 @@
       <item>subir</item>
       <item>descer</item>
       <item>
-        <item>sobe</item>
         <one-of>
-          <item>um pouco</item>
-          <item>muito</item>
+          sobe
+          <item repeat="0-1">
+            <item>um pouco</item>
+            <item>muito</item>
+          </item>
         </one-of>
       </item>
       <item>
-        <item>desce</item>
         <one-of>
-          <item>um pouco</item>
-          <item>muito</item>
+          desce
+          <item repeat="0-1">
+            <item>um pouco</item>
+            <item>muito</item>
+          </item>
         </one-of>
       </item>
     </one-of>
@@ -124,25 +131,29 @@
         </one-of>
       </item>
       <item>
-        <item>aumenta</item>
         <one-of>
-          <item>um pouco</item>
-          <item>muito</item>
-          <item>a letra</item>
-          <item>imagem</item>
-          <item>página</item>
-          <item>zoom</item>
+          aumenta
+          <item repeat="0-1">
+            <item>um pouco</item>
+            <item>muito</item>
+            <item>a letra</item>
+            <item>imagem</item>
+            <item>página</item>
+            <item>zoom</item>
+          </item>
         </one-of>
       </item>
       <item>
-        <item>diminui</item>
         <one-of>
-          <item>um pouco</item>
-          <item>muito</item>
-          <item>a letra</item>
-          <item>imagem</item>
-          <item>página</item>
-          <item>zoom</item>
+          diminui
+          <item repeat="0-1">
+            <item>um pouco</item>
+            <item>muito</item>
+            <item>a letra</item>
+            <item>imagem</item>
+            <item>página</item>
+            <item>zoom</item>
+          </item>
         </one-of>
       </item>
     </one-of>
