@@ -50,8 +50,6 @@ namespace AppGui
             driver = new ChromeDriver(Environment.CurrentDirectory);
             driver.Manage().Window.Maximize();
             driver.Url = defaultUrl;
-            Search("ola entao ta tudo crl");
-            ClickOnResults();
         }
 
         private void OpenDownloads()

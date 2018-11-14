@@ -6,7 +6,4 @@
         xmlns:local="clr-namespace:AppGui"
         mc:Ignorable="d"
         Title="MainWindow" Height="169.052" Width="240.116">
-    <Grid>
-
-    </Grid>
 </Window>
