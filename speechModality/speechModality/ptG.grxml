@@ -1,325 +1,489 @@
-﻿<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <grammar xml:lang="pt-PT" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
   <rule id="rootRule" scope="public">
-    <item>
+    <one-of>
       <item>
-        <ruleref uri="#object">
-          <tag>out.sentence=rules.latest();</tag>
-        </ruleref>
+        <ruleref uri="#yes"/>
+        <tag>out.yes=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#yes">
-          <tag>out.confirmationRule="yes";</tag>
-        </ruleref>
+        <ruleref uri="#no"/>
+        <tag>out.no=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#no">
-          <tag>out.confirmationRule="no";</tag>
-        </ruleref>
+        <ruleref uri="#noVariation"/>
+        <tag>out.noVariation=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#scroll">
-          <tag>out.directionRule=rules.directionRule;</tag>
-        </ruleref>
+        <ruleref uri="#yesVariation"/>
+        <tag>out.yesVariation=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#zoom">
-          <tag>out.moreOrLessRule=rules.moreOrLessRule;</tag>
-        </ruleref>
+        <ruleref uri="#openSettings"/>
+        <tag>out.openSettings=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#search">
-          <tag>out.queryRule=rules.queryRule;</tag>
-        </ruleref>
+        <ruleref uri="#openDownloads"/>
+        <tag>out.openDownloads=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#quitChrome">
-          <tag>out.quitRule=rules.quitChromeRule;</tag>
-        </ruleref>
+        <ruleref uri="#openTab"/>
+        <tag>out.openTab=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#newTab">
-          <tag>out.newTabRule=rules.newTabRule;</tag>
-        </ruleref>
+        <ruleref uri="#scrollUp"/>
+        <tag>out.scrollUp=rules.latest();</tag>
       </item>
       <item>
-        <ruleref uri="#openIncognito">
-          <tag>out.openIncognitoRule=rules.openIncognitoRule;</tag>
-        </ruleref>
+        <ruleref uri="#scrollDown"/>
+        <tag>out.scrollDown=rules.latest();</tag>
       </item>
-    </item>
+      <item>
+        <ruleref uri="#zoomIn"/>
+        <tag>out.zoomIn=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#zoomOut"/>
+        <tag>out.zoomOut=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#zoomInVariation"/>
+        <tag>out.zoomInVariation=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#zoomOutVariation"/>
+        <tag>out.zoomOutVariation=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#synonyms"/>
+        <tag>out.synonyms=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#quitChrome"/>
+        <tag>out.quitChrome=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#quitChromeVariation"/>
+        <tag>out.quitChromeVariation=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#openIncognito"/>
+        <tag>out.openIncognito=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#minimize"/>
+        <tag>out.minimize=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#maximize"/>
+        <tag>out.maximize=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#searchInPage"/>
+        <tag>out.searchInPage=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#closeTab"/>
+        <tag>out.closeTab=rules.latest();</tag>
+      </item>
+      <item>
+        <ruleref uri="#refresh"/>
+        <tag>out.refresh=rules.latest();</tag>
+      </item>
+    </one-of>
   </rule>
+
+  <rule id="minimize">
+    <item>minimiza</item>
+    <tag>out="MINIMIZE";</tag>
+  </rule>
+
+  <rule id="goBack">
+    para
+    <one-of>
+      <item>trás</item>
+      <item>a página anterior</item>
+    </one-of>
+    <tag>out="BACK";</tag>
+  </rule>
+  
+  
+  <rule id="goForward">
+    para
+    <one-of>
+      <item>a frente</item>
+      <item>a página seguinte</item>
+    </one-of>
+    <tag>out="FORWARD";</tag>
+  </rule>
+
+  <rule id="maximize">
+    <one-of>
+      <item>maximiza</item>
+      <item>ecrã total</item>
+    </one-of>
+    <tag>out="MAXIMIZE";</tag>
+  </rule>
+
+  <rule id="searchInPageTags">
+    <one-of>
+      <item>existe</item>
+      <item>a palavra</item>
+    </one-of>
+  </rule>
+
+  <rule id="questions">
+    <one-of>
+      <item>onde é</item>
+      <item>o que é</item>
+      <item>quanto custa</item>
+      <item>quem é</item>
+      <item>define</item>
+      <item>comprar</item>
+    </one-of>
+  </rule>
+
+  <rule id="searchWords">
+    <one-of>
+      <item>desafio</item>
+      <item>trator</item>
+      <item>parte</item>
+      <item>túnel</item>
+      <item>lótus</item>
+      <item>bolsas</item>
+      <item>méxico</item>
+      <item>aluno</item>
+      <item>táxi</item>
+      <item>lenha</item>
+    </one-of>
+  </rule>
+
+  <rule id="conectors">
+    <one-of>
+      <item>a</item>
+      <item>o</item>
+      <item>um</item>
+      <item>uma</item>
+      <item>com</item>
+      <item>para</item>
+    </one-of>
+  </rule>
+
+  <rule id="search">
+    <item repeat="0-1">
+      <ruleref uri="#questions"></ruleref>
+    </item>
+    <item repeat="0-1">
+      <ruleref uri="#conectors"/>
+    </item>
+    <item>
+      <ruleref uri="#searchWords"></ruleref>
+    </item>
+    <tag>out="SEARCH_QUERY";</tag>
+  </rule>
+
+  <rule id="searchInPage">
+    <item repeat="0-1">
+      <ruleref uri="#searchInPageTags"></ruleref>
+    </item>
+    <one-of>
+      <item>freio</item>
+      <item>esgrima</item>
+      <item>confúcio</item>
+      <item>faces</item>
+      <item>palha</item>
+      <item>colisão</item>
+      <item>travesseiro</item>
+      <item>soluço</item>
+      <item>felino</item>
+      <item>rena</item>
+    </one-of>
+    <item repeat="0-1">na página</item>
+    <item repeat="0-1">está na página</item>
+    <tag>out="FIND_IN_PAGE";</tag>
+  </rule>
+
   <rule id="yes">
     <one-of>
-      <item>sim</item>
-      <item>ya</item>
-      <item>afirmativo</item>
-      <item>pode ser</item>
-      <item>correto</item>
-      <item>yap</item>
-      <item>positivo</item>
-      <item>com certeza</item>
-      <item>de acordo</item>
-      <item>isso</item>
-      <item>ok</item>
       <item>
         <one-of>
-          está
-          <item repeat="0-1">
-            <item>bem</item>
-            <item>certo</item>
-            <item>ok</item>
-          </item>
+          <item>sim</item>
+          <item>ya</item>
+          <item>afirmativo</item>
+          <item>pode ser</item>
+          <item>correto</item>
+          <item>yap</item>
+          <item>positivo</item>
+          <item>com certeza</item>
+          <item>de acordo</item>
+          <item>isso</item>
+          <item>ok</item>
         </one-of>
+        <tag>out="AFFIRMATIVE";</tag>
       </item>
     </one-of>
   </rule>
+
+  <rule id="yesVariation">
+    está
+    <item repeat="0-1">
+      <one-of>
+        <item>bem</item>
+        <item>certo</item>
+        <item>ok</item>
+      </one-of>
+      <tag>out="AFFIRMATIVE";</tag>
+    </item>
+  </rule>
+
   <rule id="no">
     <one-of>
-      não
-      <item repeat="0-1">
-        <one-of>
-          <item>pode ser</item>
-          <item>quero</item>
-        </one-of>
-      </item>
-      <item>nope</item>
-      <item>negativo</item>
-      <item>jamais</item>
-      <item>rejeito</item>
-      <item>incorreto</item>
-      <item>nada disso</item>
-    </one-of>
-  </rule>
-  <rule id="directionRule">
-    <one-of>
-      <item>para cima</item>
-      <item>para baixo</item>
-      <item>subir</item>
-      <item>descer</item>
       <item>
         <one-of>
-          sobe
-          <item repeat="0-1">
-            <item>um pouco</item>
-            <item>muito</item>
-          </item>
+          <item>nope</item>
+          <item>negativo</item>
+          <item>jamais</item>
+          <item>rejeito</item>
+          <item>incorreto</item>
+          <item>nada disso</item>
         </one-of>
-      </item>
-      <item>
-        <one-of>
-          desce
-          <item repeat="0-1">
-            <item>um pouco</item>
-            <item>muito</item>
-          </item>
-        </one-of>
+        <tag>out="REJECT";</tag>
       </item>
     </one-of>
   </rule>
-  <rule id="moreOrLessRule">
-    <one-of>
-      <item>
-        <item>vejo</item>
-        <one-of>
-          <item>mal</item>
-          <item>bem</item>
-          <item>muito</item>
-          <item>pouco</item>
-          <item>nada</item>
-          <item>demasiado</item>
-        </one-of>
-      </item>
-      <item>
-        <one-of>
-          aumenta
-          <item repeat="0-1">
-            <item>um pouco</item>
-            <item>muito</item>
-            <item>a letra</item>
-            <item>imagem</item>
-            <item>página</item>
-            <item>zoom</item>
-          </item>
-        </one-of>
-      </item>
-      <item>
-        <one-of>
-          diminui
-          <item repeat="0-1">
-            <item>um pouco</item>
-            <item>muito</item>
-            <item>a letra</item>
-            <item>imagem</item>
-            <item>página</item>
-            <item>zoom</item>
-          </item>
-        </one-of>
-      </item>
-    </one-of>
-  </rule>
-  <rule id="queryRule">
-    <one-of>
-      <item>
-        <item>Significado de</item>
-        <one-of>
-          <item>freio</item>
-          <item>esgrima</item>
-          <item>confúcio</item>
-          <item>faces</item>
-          <item>palha</item>
-          <item>colisão</item>
-          <item>travesseiro</item>
-          <item>soluço</item>
-          <item>felino</item>
-          <item>rena</item>
-        </one-of>
-      </item>
-      <item>
-        <item>o que</item>
-        <one-of>
-          <item>é</item>
-          <item>quer dizer</item>
-        </one-of>
-        <one-of>
-          <item>um</item>
-          <item>uma</item>
-          <item>o</item>
-          <item>a</item>
-          <item>freio</item>
-          <item>esgrima</item>
-          <item>confúcio</item>
-          <item>faces</item>
-          <item>palha</item>
-          <item>colisão</item>
-          <item>travesseiro</item>
-          <item>soluço</item>
-          <item>felino</item>
-          <item>rena</item>
-        </one-of>
-        <one-of>
-          <item>freio</item>
-          <item>esgrima</item>
-          <item>confúcio</item>
-          <item>faces</item>
-          <item>palha</item>
-          <item>colisão</item>
-          <item>travesseiro</item>
-          <item>soluço</item>
-          <item>felino</item>
-          <item>rena</item>
-        </one-of>
-      </item>
-      <item>
-        <item>Sinónimo de</item>
-        <one-of>
-          <item>freio</item>
-          <item>esgrima</item>
-          <item>confúcio</item>
-          <item>faces</item>
-          <item>palha</item>
-          <item>colisão</item>
-          <item>travesseiro</item>
-          <item>soluço</item>
-          <item>felino</item>
-          <item>rena</item>
-        </one-of>
-      </item>
-    </one-of>
-  </rule>
-  <rule id="quitChromeRule">
+
+  <rule id="quitChrome">
     <one-of>
       <item>sai</item>
       <item>sair</item>
       <item>fecha tudo</item>
-      <item>
-        <item>vou</item>
-        <one-of>
-          <item>sair</item>
-          <item>embora</item>
-        </one-of>
-      </item>
+      <item>fechar</item>
     </one-of>
+    <tag>out="QUIT_CHROME";</tag>
   </rule>
-  <rule id="newTabRule">
+
+  <rule id="closeTab">
+    <item>
+      <ruleref uri="#quitChrome"></ruleref>
+    </item>
     <one-of>
-      <item>
-        <one-of>
-          <item>separador</item>
-          <item>aba</item>
-          <item>tab</item>
-        </one-of>
-        <item>novo</item>
-      </item>
-      <item>
-        <one-of>
-          <item>abre</item>
-          <item>lança</item>
-          <item>novo</item>
-        </one-of>
-        <one-of>
-          <item>separador</item>
-          <item>aba</item>
-          <item>tab</item>
-        </one-of>
-      </item>
+      <item>tab</item>
+      <item>separador</item>
+      <item>aba</item>
     </one-of>
+    <tag>out="CLOSE_TAB";</tag>>
   </rule>
-  <rule id="openIncognitoRule">
+  <rule id="quitChromeVariation">
+    vou
     <one-of>
-      <item>
-        <one-of>
-          <item>separador</item>
-          <item>aba</item>
-          <item>tab</item>
-        </one-of>
-        <item>novo</item>
-      </item>
-      <item>
-        <one-of>
-          <item>abre</item>
-          <item>lança</item>
-          <item>novo</item>
-        </one-of>
-        <one-of>
-          <item>separador</item>
-          <item>aba</item>
-          <item>tab</item>
-        </one-of>
-      </item>
+      <item>sair</item>
+      <item>embora</item>
+      <item>abandonar</item>
+    </one-of>
+    <tag>out="QUIT_CHROME"</tag>
+  </rule>
+
+  <rule id="refresh">
+    <one-of>
+      <item>atualiza a página</item>
+      <item>atualizar</item>
+      <item>refresh</item>
+    </one-of>
+    <tag>out="REFRESH";</tag>
+  </rule>
+  
+  <rule id="noVariation">
+    não
+    <item repeat="0-1">
+      <one-of>
+        <item>pode ser</item>
+        <item>quero</item>
+      </one-of>
+      <tag>out="REJECT";</tag>
+    </item>
+  </rule>
+
+ 
+  <rule id="openActions">
+    <one-of>
+      <item>abrir</item>
+      <item>abre</item>
+      <item>mostra</item>
+      <item>mostrar</item>
+      <item>lançar</item>
+      <item>inicia</item>
+      <item>lança</item>
     </one-of>
   </rule>
 
-
-  <rule id="object">
+  <rule id="quantity">
     <one-of>
-      <item>
-        Novo Separador<tag>out="NEW_TAB"</tag>
-      </item>
-      <item>
-        Sinónimo de tentar<tag>out="SEARCH"</tag>
-      </item>
-      <item>
-        Não vejo nada<tag>out="ZOOM_IN"</tag>
-      </item>
-      <item>
-        Está demasiado grande<tag>out="ZOOM_OUT"</tag>
-      </item>
-      <item>
-        Mais para cima <tag>out="SCROLL_UP"</tag>
-      </item>
-      <item>
-        Mais para baixo <tag>out="SCROLL_DOWN"</tag>
-      </item>
-      <item>
-        Fim da página <tag>out="BOTTOM"</tag>
-      </item>
-      <item>
-        Inicío da página <tag>out="TOP"</tag>
-      </item>
-      <item>
-        Vou embora <tag>out="CLOSE_CHROME"</tag>
-      </item>
+      <item>muito</item>
+      <item>pouco</item>
     </one-of>
+  </rule>
+
+  <rule id="scrollUpActions">
+    <one-of>
+      <item>para cima</item>
+      <item>subir</item>
+      <item>sobe</item>
+    </one-of>
+  </rule>
+
+  <rule id="scrollDownActions">
+    <one-of>
+      <item>descer</item>
+      <item>desce</item>
+      <item>para baixo</item>
+    </one-of>
+  </rule>
+
+  <rule id="zoomInAdjectives">
+    <one-of>
+      <item>bem</item>
+      <item>demasiado bem</item>
+      <item>muito bem</item>
+    </one-of>
+  </rule>
+
+  <rule id="zoomOutAdjectives">
+    <one-of>
+      <item>mal</item>
+      <item>demasiado mal</item>
+      <item>muito mal</item>
+    </one-of>
+  </rule>
+
+  <rule id="zoomKeywords">
+    <one-of>
+      <item>um pouco</item>
+      <item>muito</item>
+      <item>a letra</item>
+      <item>a imagem</item>
+      <item>a página</item>
+      <item>zoom</item>
+    </one-of>
+  </rule>
+
+  <rule id="zoomIn">
+    vejo
+    <item>
+      <ruleref uri="#zoomInAdjectives"></ruleref>
+      <tag>out="ZOOM_IN";</tag>
+    </item>
+  </rule>
+
+  <rule id="zoomInVariation">
+    aumenta
+    <item>
+      <ruleref uri="#zoomKeywords"></ruleref>
+      <tag>out="ZOOM_IN";</tag>
+    </item>
+  </rule>
+
+  <rule id="zoomOutVariation">
+    diminui
+    <item>
+      <ruleref uri="#zoomKeywords"></ruleref>
+      <tag>out="ZOOM_OUT";</tag>
+    </item>
+  </rule>
+  
+  <rule id="zoomOut">
+    vejo
+    <item>
+      <ruleref uri="#zoomOutAdjectives"></ruleref>
+      <tag>out="ZOOM_OUT";</tag>
+    </item>
+  </rule>
+
+  <rule id="wordsToSearch">
+    <one-of>
+      <item>freio</item>
+      <item>esgrima</item>
+      <item>confúcio</item>
+      <item>faces</item>
+      <item>palha</item>
+      <item>colisão</item>
+      <item>travesseiro</item>
+      <item>soluço</item>
+      <item>felino</item>
+      <item>rena</item>
+    </one-of>
+  </rule>
+
+  <rule id="synonyms">
+    <item>sinónimo de</item>
+    <item>
+      <ruleref uri="#wordsToSearch"></ruleref>
+      <tag>out="SYNONYMS"</tag>
+    </item>
+  </rule>
+  
+  <rule id="scrollUp">
+    <item repeat="0-1">
+      <ruleref uri="#quantity"></ruleref>
+    </item>
+    <ruleref uri="#scrollUpActions"></ruleref>
+    <item repeat="0-1">
+      <ruleref uri="#quantity"></ruleref>
+    </item>
+    <tag>out="SCROLL_UP";</tag>
+  </rule>
+
+  <rule id="scrollDown">
+    <item repeat="0-1">
+      <ruleref uri="#quantity"></ruleref>
+    </item>
+    <ruleref uri="#scrollDownActions"></ruleref>
+    <item repeat="0-1">
+      <ruleref uri="#quantity"></ruleref>
+    </item>
+    <tag>out="SCROLL_DOWN";</tag>
+  </rule>
+  
+  <rule id="openSettings">
+    <item>
+      <ruleref uri="#openActions"></ruleref>
+    </item>
+    <item>configurações</item>
+    <tag>out="OPEN_SETTINGS";</tag>
+  </rule>
+
+  <rule id="openDownloads">
+    <item>
+      <ruleref uri="#openActions"></ruleref>
+    </item>
+    <one-of>
+      <item>downloads</item>
+      <item>transferências</item>
+    </one-of>
+    <tag>out="OPEN_DOWNLOADS"</tag>
+  </rule>
+
+  <rule id="openTab">
+    <item>
+      <ruleref uri="#openActions"></ruleref>
+    </item>
+    <one-of>
+      <item>separador</item>
+      <item>tab</item>
+      <item>aba</item>
+    </one-of>
+    <tag>out="OPEN_TAB";</tag>
+  </rule>
+
+  <rule id="openIncognito">
+    <item>
+      <ruleref uri="#openActions"></ruleref>
+    </item>
+    <one-of>
+      <item>modo incógnito</item>
+      <item>incóginto</item>
+      <item>modo privado</item>
+    </one-of>
+    <tag>out="OPEN_INCOGNITO";</tag>
   </rule>
 </grammar>
