@@ -1,6 +1,7 @@
 ﻿using System;
 using mmisharp;
 using Microsoft.Speech.Recognition;
+using multimodal;
 
 namespace speechModality
 {
@@ -9,6 +10,7 @@ namespace speechModality
         private SpeechRecognitionEngine sre;
         private Grammar gr;
         public event EventHandler<SpeechEventArg> Recognized;
+        private Tts tts;
         protected virtual void onRecognized(SpeechEventArg msg)
         {
             EventHandler<SpeechEventArg> handler = Recognized;
@@ -35,6 +37,7 @@ namespace speechModality
             gr = new Grammar(Environment.CurrentDirectory + "\\ptG.grxml", "rootRule");
             sre.LoadGrammar(gr);
 
+            tts = new Tts();
 
             sre.SetInputToDefaultAudioDevice();
             sre.RecognizeAsync(RecognizeMode.Multiple);
@@ -52,18 +55,30 @@ namespace speechModality
         {
             onRecognized(new SpeechEventArg() { Text = e.Result.Text, Confidence = e.Result.Confidence, Final = true });
 
-            //SEND
-            // IMPORTANT TO KEEP THE FORMAT {"recognized":["SHAPE","COLOR"]}
-            string json = "{ \"recognized\": [";
-            foreach (var resultSemantic in e.Result.Semantics)
+            if(e.Result.Confidence > 0.75)
             {
-                json += "\"" + resultSemantic.Value.Value + "\", ";
-            }
-            json = json.Substring(0, json.Length - 2);
-            json += "] }";
+                string json = "{ \"recognized\": [";
+                foreach (var resultSemantic in e.Result.Semantics)
+                {
+                    json += "\"" + resultSemantic.Value.Value + "\", ";
+                }
+                json = json.Substring(0, json.Length - 2);
+                json += "] }";
 
-            var exNot = lce.ExtensionNotification(e.Result.Audio.StartTime + "", e.Result.Audio.StartTime.Add(e.Result.Audio.Duration) + "", e.Result.Confidence, json);
-            mmic.Send(exNot);
+                var exNot = lce.ExtensionNotification(e.Result.Audio.StartTime + "", e.Result.Audio.StartTime.Add(e.Result.Audio.Duration) + "", e.Result.Confidence, json);
+                mmic.Send(exNot);
+
+                tts.Speak("Comando enviado");
+            } 
+            else if(e.Result.Confidence < 0.5)
+            {
+
+            }
+            else
+            {
+                tts.Speak("Não compreendi. Repita, por favor!");
+            }
+            
         }
     }
 }
