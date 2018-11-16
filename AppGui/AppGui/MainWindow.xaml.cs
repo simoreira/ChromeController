@@ -29,12 +29,10 @@ namespace AppGui
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
         private String defaultUrl = "http://www.google.pt";
-        private Tts tts;
 
         private SpeechRecognitionEngine sr;
         public MainWindow()
         {
-            tts = new Tts();
 
             InitializeComponent();
             InitializeChrome();
