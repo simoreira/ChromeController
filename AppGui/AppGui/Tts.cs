@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using System.Media;
 using Microsoft.Speech.Synthesis;
-using Microsoft.Speech.AudioFormat;
 
 namespace AppGui
 {

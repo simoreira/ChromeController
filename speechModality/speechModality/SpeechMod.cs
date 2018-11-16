@@ -43,6 +43,7 @@ namespace speechModality
 
         }
 
+
         private void Sre_SpeechHypothesized(object sender, SpeechHypothesizedEventArgs e)
         {
             onRecognized(new SpeechEventArg() { Text = e.Result.Text, Confidence = e.Result.Confidence, Final = false });

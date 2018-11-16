@@ -29,13 +29,12 @@ namespace AppGui
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
         private String defaultUrl = "http://www.google.pt";
-        //private Tts tts;
+        private Tts tts;
 
         private SpeechRecognitionEngine sr;
         public MainWindow()
         {
-            //tts = new Tts();
-            //SpeechRecognizer();
+            tts = new Tts();
 
             InitializeComponent();
             InitializeChrome();
@@ -87,11 +86,6 @@ namespace AppGui
 
         }
 
-        private void changeInitialPage(String url)
-        {
-            defaultUrl = url;
-            Console.WriteLine(defaultUrl);
-        }
         private void CloseTab()
         {
             driver.Close();
@@ -243,89 +237,60 @@ namespace AppGui
             js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
         }
 
-        /*
-        public void SpeechRecognizer()
-        {
-
-            //creates the speech recognizer engine
-            sr = new SpeechRecognitionEngine();
-            sr.SetInputToDefaultAudioDevice();
-
-
-            Grammar gr = CreateGrammar();
-
-            //load Grammar to speech engine
-            sr.LoadGrammar(gr);
-
-            //assigns a method, to execute when speech is recognized
-            sr.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(SpeechRecognized);
-            sr.RecognizeAsync(RecognizeMode.Multiple);
-            Console.WriteLine("Starting Asynchronous speech recognition...");
-        }
-        */
-
-        /*
-         * SpeechRecognized
-         * 
-         * EventHandler
-         * 
-         * 
-        */
-        public void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-        {
-            //gets recognized text
-            string text = e.Result.Text;
-            Thread t = new Thread(Chromehandler);
-            t.Start(e);
-            Console.WriteLine(text);
-        }
-
-
-        private Grammar CreateGrammar()
-        {
-            Choices confirm = new Choices(new string[] { "sim" });
-            SemanticResultValue confirmClose = new SemanticResultValue(confirm, "sim");
-
-            Choices f = new Choices();
-            f.Add(confirmClose);
-            GrammarBuilder fGrammar = (GrammarBuilder)f;
-
-            Grammar g = new Grammar((GrammarBuilder)fGrammar);
-            return g;
-        }
-
-        private void Chromehandler(object obj)
-        {
-            SpeechRecognizedEventArgs e = (SpeechRecognizedEventArgs)obj;
-            //string originalText = e.Result.Text;
-            string semantic = (string)e.Result.Semantics.Value;
-
-            if (e.Result.Confidence > 0.75)
-            {
-                switch (semantic)
-                {
-                    case "sim":
-                        QuitChrome();
-                        break;
-
-                }
-            }
-        }
-
         private void MmiC_Message(object sender, MmiEventArgs e)
         {
             Console.WriteLine(e.Message);
             var doc = XDocument.Parse(e.Message);
             var com = doc.Descendants("command").FirstOrDefault().Value;
-            dynamic json = JsonConvert.DeserializeObject(com);
+            dynamic json = null;
+            try
+            {
+                json = JsonConvert.DeserializeObject(com);
+            }
+            catch (Exception) { }
+            try {
+                if ((string)json.recognized[1].ToString() == "FIND_IN_PAGE")
+                {
+                    SearchTextInPage((string)json.recognized[0].ToString());
+                }
+            }
+            catch (Exception)
+            {
 
+            }
+            
             switch ((string)json.recognized[0].ToString())
             {
-                case "NEW_TAB":
-                    NewTab(TabName(), defaultUrl);
+             
+                case "MINIMIZE":
+                    Minimize();
                     break;
-                case "SEARCH":
-                    //Search();
+                case "MAXIMIZE":
+                    Maximize();
+                    break;
+                case "BACK":
+                    GoBack();
+                    break;
+                case "FORWARD":
+                    GoForward();
+                    break;
+                   
+                    /*
+                case "AFFIRMATIVE":
+                    // cena de aceitar
+                    break;
+                case "NEGATIVE":
+                    // cena de recusar;
+                    break;
+                    */
+                case "QUIT_CHROME":
+                    //QuitChrome();
+                    //break;
+                case "CLOSE_TAB":
+                    CloseTab();
+                    break;
+                case "REFRESH":
+                    Refresh();
                     break;
                 case "ZOOM_IN":
                     ZoomIn();
@@ -339,45 +304,19 @@ namespace AppGui
                 case "SCROLL_DOWN":
                     ScrollDown();
                     break;
-                case "BOTTOM":
-                    ScrollBottom();
+                case "OPEN_SETTINGS":
+                    OpenSettings();
                     break;
-                case "TOP":
-                    ScrollTop();
+                case "OPEN_DOWNLOADS":
+                    OpenDownloads();
                     break;
-                case "CLOSE_CHROME":
-                    //tts.Speak("Tem a certeza?");
-                    //QuitChrome();
+                case "OPEN_TAB":
+                    NewTab(TabName(), defaultUrl);
+                    break;
+                case "OPEN_INCOGNITO":
+                    OpenIncognitoTab();
                     break;
             }
-
-            /*
-            App.Current.Dispatcher.Invoke(() =>
-            {
-                switch ((string)json.recognized[1].ToString())
-                {
-                    case "GREEN":
-                        _s.Fill = Brushes.Green;
-                        break;
-                    case "BLUE":
-                        _s.Fill = Brushes.Blue;
-                        break;
-                    case "RED":
-                        _s.Fill = Brushes.Red;
-                        break;
-                    case "BLACK":
-                        _s.Fill = Brushes.Black;
-                        break;
-                    case "YELLOW":
-                        _s.Fill = Brushes.Yellow;
-                        break;
-                }
-            });
-            */
-
-
-
-
         }
     }
 }
