@@ -12,9 +12,8 @@ namespace speechModality
         private Grammar gr;
         public event EventHandler<SpeechEventArg> Recognized;
         private Tts tts;
-        //private Boolean assistantSpeaking, acceptingVoiceInput, awaitingConfirmation, awaitingCloseChromeConfirmation = false;
         private SemanticValue actualSemantic = null;
-        Timer speakingTimer;
+
         protected virtual void onRecognized(SpeechEventArg msg)
         {
             EventHandler<SpeechEventArg> handler = Recognized;
@@ -56,53 +55,23 @@ namespace speechModality
             onRecognized(new SpeechEventArg() { Text = e.Result.Text, Confidence = e.Result.Confidence, Final = false });
         }
 
-       /* private void OnSpeakingEnded(Object source, ElapsedEventArgs e)
-        {
-            Console.WriteLine("Assistant stopped speaking.");
-            assistantSpeaking = false;
-
-        }
-        private void Speak(String text, int seconds)
-        {
-            string str = "<speak version=\"1.0\"";
-            str += " xmlns:ssml=\"http://www.w3.org/2001/10/synthesis\"";
-            str += " xml:lang=\"pt-PT\">";
-            str += text;
-            str += "</speak>";
-
-            tts.Speak(str, 0);
-
-            // enable talking flag
-            assistantSpeaking = true;
-            Console.WriteLine("Assistant speaking.");
-
-            speakingTimer = new Timer(seconds * 1000);
-            speakingTimer.Elapsed += OnSpeakingEnded;
-            speakingTimer.AutoReset = false;
-            speakingTimer.Enabled = true;
-        }
-
-        private void Speak(String text)
-        {
-            Speak(text, 4);
-        }*/
-       
         private void Sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             onRecognized(new SpeechEventArg() { Text = e.Result.Text, Confidence = e.Result.Confidence, Final = true });
 
-            
+
 
             // ignore low confidance levels
-            if (e.Result.Confidence < 0.4)
-            {
-                return;
-            }
 
-            if (e.Result.Confidence <= 0.30)
+            if (e.Result.Confidence <= 0.3)
             {
                 tts.Speak("Desculpa, não consegui entender.");
                 actualSemantic = null;
+            }
+
+            if (e.Result.Confidence < 0.4)
+            {
+                return;
             }
 
             if(e.Result.Confidence <= 0.7)
@@ -111,28 +80,42 @@ namespace speechModality
 
                 if (e.Result.Semantics.ContainsKey("closeTab"))
                 {
-                    actualSemantic = e.Result.Semantics;
-                    tts.Speak("Tem a certeza que pretende fechar?");
-                    return;
+                    //Em principio funciona sem o switch case 
+                    if (e.Result.Semantics["closeTab"].Value.ToString() == "CLOSE_TAB")
+                    {
+
+                        //actualSemantic = e.Result.Semantics;
+                        tts.Speak("Tem a certeza que pretende fechar o separador ?");
+                        return;
+                    }
+
+
                 }
 
                 if (e.Result.Semantics.ContainsKey("quitChrome"))
                 {
-                    actualSemantic = e.Result.Semantics;
-                    tts.Speak("Tem a certeza que pretende fechar o browser?");
-                    return;
+                    //Em principio funciona sem o switch case 
+                    if (e.Result.Semantics["quitChrome"].Value.ToString() == "QUIT_CHROME")
+                    {
+
+                        //actualSemantic = e.Result.Semantics;
+                        tts.Speak("Tem a certeza que pretende fechar o browser?");
+                        return;
+                    }
+
+
                 }
 
                 if (e.Result.Semantics.ContainsKey("goBack"))
                 {
-                    actualSemantic = e.Result.Semantics;
+                    //actualSemantic = e.Result.Semantics;
                     tts.Speak("Pretende ir para a página anterior?");
                     return;
                 }
 
                 if (e.Result.Semantics.ContainsKey("goForward"))
                 {
-                    actualSemantic = e.Result.Semantics;
+                    //actualSemantic = e.Result.Semantics;
                     tts.Speak("Pretende ir para a página seguinte?");
                     return;
                 }
@@ -140,18 +123,34 @@ namespace speechModality
             }
             else
             {
+                //actualSemantic = e.Result.Semantics;
+
                 if (e.Result.Semantics.ContainsKey("closeTab"))
                 {
-                    actualSemantic = e.Result.Semantics;
-                    tts.Speak("Tem a certeza que pretende fechar?");
-                    return;
+                    //Em principio funciona sem o switch case 
+                    if (e.Result.Semantics["closeTab"].Value.ToString() == "CLOSE_TAB")
+                    {
+
+                        actualSemantic = e.Result.Semantics;
+                        tts.Speak("Tem a certeza que pretende fechar o separador ola ?");
+                        return;
+                    }
+
+
                 }
 
                 if (e.Result.Semantics.ContainsKey("quitChrome"))
                 {
-                    actualSemantic = e.Result.Semantics;
-                    tts.Speak("Tem a certeza que pretende fechar o browser?");
-                    return;
+                    //Em principio funciona sem o switch case 
+                    if (e.Result.Semantics["quitChrome"].Value.ToString() == "QUIT_CHROME")
+                    {
+
+                        actualSemantic = e.Result.Semantics;
+                        tts.Speak("Tem a certeza que pretende fechar o browser ola?");
+                        return;
+                    }
+
+
                 }
             }
 
@@ -159,18 +158,45 @@ namespace speechModality
 
             if (actualSemantic != null)
             {
+                foreach(var i in actualSemantic)
+                {
+                    Console.WriteLine("atual: " + i.Value.Value);
+                }
                 if (e.Result.Semantics.ContainsKey("yes"))
                 {
-                    tts.Speak("A tratar disso.");
-                    return;
+                    switch (e.Result.Semantics["yes"].Value.ToString())
+                    {
+                        case "AFFIRMATIVE":
+
+                            if (e.Result.Semantics["yes"].Value.ToString() == "AFFIRMATIVE")
+                            {
+                                tts.Speak("Com certeza.");
+                            }
+                            break;
+                    }
+                }
+                else
+                {
+                    if (e.Result.Semantics.ContainsKey("no"))
+                    {
+                        switch (e.Result.Semantics["no"].Value.ToString())
+                        {
+                            case "REJECT":
+                                if (e.Result.Semantics["no"].Value.ToString() == "REJECT")
+                                {
+                                    tts.Speak("Ok, desculpa, às vezes ando um pouco distraída.");
+                                }
+                                return;
+                        }
+                    }
                 }
 
-                if(e.Result.Semantics.ContainsKey("no"))
-                {
-                    tts.Speak("Peço desculpa, entendi mal!");
-                    return;
-                }
-                
+
+
+
+
+
+
 
                 semanticValue = actualSemantic;
                 actualSemantic = null;
