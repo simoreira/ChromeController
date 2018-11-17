@@ -10,7 +10,10 @@
         <ruleref uri="#maximize"/>
       </item>
       <item>
-        <ruleref uri="#moveInTabs"/>
+        <ruleref uri="#goBack"/>
+      </item>
+      <item>
+        <ruleref uri="#goForward"/>
       </item>
       <item>
         <ruleref uri="#yesOrNo"/>
@@ -75,8 +78,8 @@
     </one-of>
     <tag>out.maximize="MAXIMIZE";</tag>
   </rule>
-
-  <rule id="moveInTabs">
+  
+  <rule id="goBack">
     <item>
       <item>vai para</item>
       <one-of>
@@ -85,6 +88,8 @@
       </one-of>
       <tag>out.goBack="BACK";</tag>
     </item>
+  </rule>
+  <rule id="goForward">
     <item>
       <item>vai para</item>
       <one-of>
@@ -94,7 +99,7 @@
       <tag>out.goForward="FORWARD";</tag>
     </item>
   </rule>
-
+  
   <rule id="yesOrNo">
     <item>
       <one-of>

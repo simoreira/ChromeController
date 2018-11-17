@@ -29,13 +29,14 @@ namespace AppGui
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
         private String defaultUrl = "http://www.google.pt";
+        private Tts tts;
 
-        private SpeechRecognitionEngine sr;
         public MainWindow()
         {
 
             InitializeComponent();
             InitializeChrome();
+            tts = new Tts();
 
             mmiC = new MmiCommunication("localhost", 8000, "User1", "GUI");
             mmiC.Message += MmiC_Message;
@@ -80,7 +81,14 @@ namespace AppGui
         private void SearchTextInPage(string text)
         {
             IWebElement body = driver.FindElement(By.TagName("body"));
-            Console.WriteLine(body.Text.Contains(text));
+            if (body.Text.Contains(text))
+            {
+                tts.Speak("A palavra " + text + " existe!");
+            }
+            else
+            {
+                tts.Speak("A palavra " + text + " não existe!");
+            }
 
         }
 

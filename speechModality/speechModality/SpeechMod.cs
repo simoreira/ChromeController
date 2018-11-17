@@ -46,7 +46,6 @@ namespace speechModality
             sre.RecognizeAsync(RecognizeMode.Multiple);
             sre.SpeechRecognized += Sre_SpeechRecognized;
             sre.SpeechHypothesized += Sre_SpeechHypothesized;
-
         }
 
 
@@ -58,11 +57,7 @@ namespace speechModality
         private void Sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             onRecognized(new SpeechEventArg() { Text = e.Result.Text, Confidence = e.Result.Confidence, Final = true });
-
-
-
-            // ignore low confidance levels
-
+            
             if (e.Result.Confidence <= 0.3)
             {
                 tts.Speak("Desculpa, não consegui entender.");
@@ -80,77 +75,43 @@ namespace speechModality
 
                 if (e.Result.Semantics.ContainsKey("closeTab"))
                 {
-                    //Em principio funciona sem o switch case 
                     if (e.Result.Semantics["closeTab"].Value.ToString() == "CLOSE_TAB")
                     {
-
-                        //actualSemantic = e.Result.Semantics;
                         tts.Speak("Tem a certeza que pretende fechar o separador ?");
                         return;
                     }
-
-
                 }
 
                 if (e.Result.Semantics.ContainsKey("quitChrome"))
                 {
-                    //Em principio funciona sem o switch case 
                     if (e.Result.Semantics["quitChrome"].Value.ToString() == "QUIT_CHROME")
                     {
-
-                        //actualSemantic = e.Result.Semantics;
                         tts.Speak("Tem a certeza que pretende fechar o browser?");
                         return;
                     }
-
-
-                }
-
-                if (e.Result.Semantics.ContainsKey("goBack"))
-                {
-                    //actualSemantic = e.Result.Semantics;
-                    tts.Speak("Pretende ir para a página anterior?");
-                    return;
-                }
-
-                if (e.Result.Semantics.ContainsKey("goForward"))
-                {
-                    //actualSemantic = e.Result.Semantics;
-                    tts.Speak("Pretende ir para a página seguinte?");
-                    return;
                 }
                 actualSemantic = null;
             }
             else
             {
-                //actualSemantic = e.Result.Semantics;
-
                 if (e.Result.Semantics.ContainsKey("closeTab"))
                 {
-                    //Em principio funciona sem o switch case 
                     if (e.Result.Semantics["closeTab"].Value.ToString() == "CLOSE_TAB")
                     {
-
                         actualSemantic = e.Result.Semantics;
                         tts.Speak("Tem a certeza que pretende fechar o separador ola ?");
                         return;
                     }
-
-
                 }
 
                 if (e.Result.Semantics.ContainsKey("quitChrome"))
                 {
-                    //Em principio funciona sem o switch case 
                     if (e.Result.Semantics["quitChrome"].Value.ToString() == "QUIT_CHROME")
                     {
-
                         actualSemantic = e.Result.Semantics;
                         tts.Speak("Tem a certeza que pretende fechar o browser ola?");
                         return;
                     }
-
-
                 }
             }
 
@@ -158,10 +119,6 @@ namespace speechModality
 
             if (actualSemantic != null)
             {
-                foreach(var i in actualSemantic)
-                {
-                    Console.WriteLine("atual: " + i.Value.Value);
-                }
                 if (e.Result.Semantics.ContainsKey("yes"))
                 {
                     switch (e.Result.Semantics["yes"].Value.ToString())
@@ -191,13 +148,6 @@ namespace speechModality
                     }
                 }
 
-
-
-
-
-
-
-
                 semanticValue = actualSemantic;
                 actualSemantic = null;
             }
@@ -220,8 +170,6 @@ namespace speechModality
 
             var exNot = lce.ExtensionNotification(e.Result.Audio.StartTime + "", e.Result.Audio.StartTime.Add(e.Result.Audio.Duration) + "", e.Result.Confidence, json);
             mmic.Send(exNot);
-
-            //tts.Speak("Comando enviado");
 
         }
     }
