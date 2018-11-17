@@ -282,8 +282,8 @@ namespace AppGui
                     break;
                     */
                 case "QUIT_CHROME":
-                    //QuitChrome();
-                    //break;
+                    QuitChrome();
+                    break;
                 case "CLOSE_TAB":
                     CloseTab();
                     break;
