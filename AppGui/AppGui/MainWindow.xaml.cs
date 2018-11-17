@@ -272,15 +272,6 @@ namespace AppGui
                 case "FORWARD":
                     GoForward();
                     break;
-                   
-                    /*
-                case "AFFIRMATIVE":
-                    // cena de aceitar
-                    break;
-                case "NEGATIVE":
-                    // cena de recusar;
-                    break;
-                    */
                 case "QUIT_CHROME":
                     QuitChrome();
                     break;
