@@ -311,12 +311,6 @@
         esgrima<tag>out="esgrima"</tag>
       </item>
       <item>
-        confúcio<tag>out="confúcio"</tag>
-      </item>
-      <item>
-        faces<tag>out="faces"</tag>
-      </item>
-      <item>
         palha<tag>out="palha"</tag>
       </item>
       <item>
@@ -327,9 +321,6 @@
       </item>
       <item>
         soluço<tag>out="soluço"</tag>
-      </item>
-      <item>
-        felino<tag>out="felino"</tag>
       </item>
       <item>
         rena<tag>out="rena"</tag>
@@ -374,21 +365,22 @@
 
   <rule id="questions">
     <one-of>
-      <item>onde é</item>
-      <item>o que é</item>
-      <item>quanto custa</item>
-      <item>quem é</item>
-      <item>define</item>
-      <item>comprar</item>
+      <item>onde é<tag>out="onde é"</tag>
+    </item>
+      <item>o que é<tag>out="o que é"</tag></item>
+      <item>quanto custa<tag>out="quanto custa"</tag></item>
+      <item>quem é <tag>out="quem é"</tag></item>
+      <item>define<tag>out="define"</tag></item>
+      <item>comprar<tag>out="comprar"</tag></item>
     </one-of>
   </rule>
 
   <rule id="conectors">
     <one-of>
-      <item>a</item>
-      <item>o</item>
-      <item>um</item>
-      <item>uma</item>
+      <item>a<tag>out="a"</tag></item>
+      <item>o<tag>out="o"</tag></item>
+      <item>um<tag>out="um"</tag></item>
+      <item>uma<tag>out="uma"</tag></item>
     </one-of>
   </rule>
 
@@ -408,9 +400,6 @@
       </item>
       <item>
         lótus<tag>out="lótus"</tag>
-      </item>
-      <item>
-        bolsas<tag>out="bolsas"</tag>
       </item>
       <item>
         méxico<tag>out="méxico"</tag>
@@ -440,6 +429,8 @@
       </item>
     </item>
     <tag>out.search="SEARCH_QUERY"</tag>
+    <tag>out.questions=rules.questions;</tag>
+    <tag>out.conectors=rules.conectors;</tag>
     <tag>out.searchWords=rules.latest();</tag>
   </rule>
 

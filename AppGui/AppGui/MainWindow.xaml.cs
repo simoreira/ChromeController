@@ -168,7 +168,11 @@ namespace AppGui
                 }
                 if (feelingLuckyButton == null && i == 11)
                 {
-                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[3]/center/input[2]"));
+                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div/div[3]/center/input[2]"));
+                }
+                else if (feelingLuckyButton == null)
+                {
+                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div/div[2]/div[2]/div/center/input[2]"));
                 }
                 else if (feelingLuckyButton == null)
                 {
@@ -202,7 +206,12 @@ namespace AppGui
                 }
                 if (searchButton == null && i == 11)
                 {
+                    //*[@id="tsf"]/div[2]/div/div[2]/div[2]/div/center/input[1]
                     searchButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[3]/center/input[1]"));
+                }
+                else if (searchButton == null)
+                {
+                    searchButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div/div[2]/div[2]/div/center/input[1]"));
                 }
                 else if (searchButton == null)
                 {
@@ -240,26 +249,19 @@ namespace AppGui
             Console.WriteLine(e.Message);
             var doc = XDocument.Parse(e.Message);
             var com = doc.Descendants("command").FirstOrDefault().Value;
-            dynamic json = null;
-            try
-            {
-                json = JsonConvert.DeserializeObject(com);
-            }
-            catch (Exception) { }
-            try {
-                if ((string)json.recognized[1].ToString() == "FIND_IN_PAGE")
-                {
-                    SearchTextInPage((string)json.recognized[0].ToString());
-                }
-            }
-            catch (Exception)
-            {
+            dynamic json = JsonConvert.DeserializeObject(com);
 
-            }
-            
             switch ((string)json.recognized[0].ToString())
             {
-             
+                case "FIND_IN_PAGE":
+                    SearchTextInPage((string)json.recognized[1].ToString());
+                    break;
+                case "SYNONYMS":
+                    searchSynonyms((string)json.recognized[1].ToString());
+                    break;
+                case "SEARCH_QUERY":
+                    Search((string)json.recognized[1].ToString() + " " + (string)json.recognized[2].ToString() + " " +(string)json.recognized[3].ToString());
+                    break;
                 case "MINIMIZE":
                     Minimize();
                     break;
