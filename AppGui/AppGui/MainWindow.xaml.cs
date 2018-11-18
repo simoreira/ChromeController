@@ -169,7 +169,7 @@ namespace AppGui
 
                 try
                 {
-                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li[" + i + "]/div/span[2]/span/input"));
+                    feelingLuckyButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div/div[3]/center/input[2]"));
                 }
                 catch (Exception)
                 {
@@ -190,6 +190,8 @@ namespace AppGui
                 {
                     break;
                 }
+
+                //*[@id="tsf"]/div[2]/div/div[3]/center/input[2]
             }
             actions.MoveToElement(feelingLuckyButton).Click().Perform();
         }
@@ -207,7 +209,7 @@ namespace AppGui
 
                 try
                 {
-                    searchButton = driver.FindElement(By.XPath("//*[@id='sbtc']/div[2]/div[2]/div[1]/div/ul/li[" + i + "]/div/span[1]/span/input"));
+                    searchButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div/div[3]/center/input[1]"));
                 }
                 catch (Exception)
                 {
@@ -215,7 +217,7 @@ namespace AppGui
                 if (searchButton == null && i == 11)
                 {
                     //*[@id="tsf"]/div[2]/div/div[2]/div[2]/div/center/input[1]
-                    searchButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div[3]/center/input[1]"));
+                    searchButton = driver.FindElement(By.XPath("//*[@id='tsf']/div[2]/div/div[3]/center/input[1]"));
                 }
                 else if (searchButton == null)
                 {
