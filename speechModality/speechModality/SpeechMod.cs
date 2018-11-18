@@ -99,7 +99,7 @@ namespace speechModality
                     if (e.Result.Semantics["closeTab"].Value.ToString() == "CLOSE_TAB")
                     {
                         actualSemantic = e.Result.Semantics;
-                        tts.Speak("Tem a certeza que pretende fechar o separador ola ?");
+                        tts.Speak("Tem a certeza que pretende fechar o separador?");
                         return;
                     }
                 }
@@ -109,7 +109,7 @@ namespace speechModality
                     if (e.Result.Semantics["quitChrome"].Value.ToString() == "QUIT_CHROME")
                     {
                         actualSemantic = e.Result.Semantics;
-                        tts.Speak("Tem a certeza que pretende fechar o browser ola?");
+                        tts.Speak("Tem a certeza que pretende fechar o browser?");
                         return;
                     }
                 }

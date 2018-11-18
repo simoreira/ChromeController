@@ -31,7 +31,10 @@
         <ruleref uri="#openIncognito"/>
       </item>
       <item>
-        <ruleref uri="#scroll"/>
+        <ruleref uri="#scrollUp"/>
+      </item>
+      <item>
+        <ruleref uri="#scrollDown"/>
       </item>
       <item>
         <ruleref uri="#refresh"/>
@@ -269,33 +272,31 @@
     </one-of>
   </rule>
 
-  <rule id="scroll">
+  <rule id="scrollUp">
     <item>
-      <one-of>
-        <item>
-          <item repeat="0-1">vai</item>
-          <item repeat="0-1">
-            <ruleref uri="#quantity"></ruleref>
-          </item>
-          <ruleref uri="#scrollUpActions"></ruleref>
-          <item repeat="0-1">
-            <ruleref uri="#quantity"></ruleref>
-          </item>
-          <tag>out.scrollUp="SCROLL_UP";</tag>
-        </item>
-        <item>
-          <item repeat="0-1">vai</item>
-          <item repeat="0-1">
-            <ruleref uri="#quantity"></ruleref>
-          </item>
-          <ruleref uri="#scrollDownActions"></ruleref>
-          <item repeat="0-1">
-            <ruleref uri="#quantity"></ruleref>
-          </item>
-          <tag>out="SCROLL_DOWN";</tag>
-        </item>
-      </one-of>
+      <item repeat="0-1">vai</item>
+      <item repeat="0-1">
+        <ruleref uri="#quantity"></ruleref>
+      </item>
+      <ruleref uri="#scrollUpActions"></ruleref>
+      <item repeat="0-1">
+        <ruleref uri="#quantity"></ruleref>
+      </item>
     </item>
+    <tag>out.scrollUp="SCROLL_UP";</tag>
+  </rule>
+  <rule id="scrollDown">
+    <item>
+      <item repeat="0-1">vai</item>
+      <item repeat="0-1">
+        <ruleref uri="#quantity"></ruleref>
+      </item>
+      <ruleref uri="#scrollDownActions"></ruleref>
+      <item repeat="0-1">
+        <ruleref uri="#quantity"></ruleref>
+      </item>
+    </item>
+    <tag>out.scrollDown="SCROLL_DOWN";</tag>
   </rule>
 
   <rule id="refresh">
