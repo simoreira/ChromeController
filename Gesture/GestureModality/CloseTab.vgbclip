@@ -1,0 +1,2899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GestureBuilderFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ClipFile>
+		<Header>
+			<Date>2018-11-30</Date>
+			<Time>15:16:28.4761222+00:00</Time>
+			<Version>1</Version>
+			<Type>XefClip</Type>
+			<Clip>CloseTab.xef</Clip>
+			<StartFrame>13539</StartFrame>
+			<EndFrame>15167</EndFrame>
+			<ID>74037847-15f5-4261-972b-534a4cb4c3ec</ID>
+		</Header>
+		<UI_State>
+			<CurrentFrameStart>14422</CurrentFrameStart>
+			<CurrentFrameEnd>14423</CurrentFrameEnd>
+			<AttributeInterpolations />
+			<AttributeKeys />
+		</UI_State>
+		<AutoTagged />
+		<Attributes>
+			<Items xsi:type="StringAttribute" Name="Name" Value="" />
+			<Items xsi:type="IntAttribute" Name="Age" Value="0" />
+			<Items xsi:type="FloatAttribute" Name="Weight" Value="0" />
+			<Items xsi:type="FloatAttribute" Name="Height" Value="0" />
+			<Items xsi:type="StringAttribute" Name="Handedness" Value="Right" />
+		</Attributes>
+		<ClipAttributes>
+			<Items Frame="13551">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13552">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13553">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13554">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13555">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13556">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13557">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13558">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13559">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13560">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13561">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13562">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13563">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13564">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13565">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13566">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13567">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13568">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13569">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13570">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13571">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13572">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13573">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13574">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13575">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13576">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13577">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13578">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13579">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13580">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13581">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13582">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13583">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13584">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13585">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13586">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13587">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13588">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13589">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13590">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13591">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13592">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13593">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13594">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13595">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13596">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13597">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13598">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13599">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13600">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13601">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13602">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13603">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13604">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13605">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13606">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13607">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13608">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13609">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13610">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13611">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13612">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13613">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13614">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13615">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13616">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13617">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13618">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13619">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13620">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13621">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13622">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13623">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13624">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13625">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13626">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13627">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13628">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13629">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13630">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13631">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13632">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13633">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13634">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13635">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13636">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13637">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13638">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13639">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13640">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13641">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13642">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13643">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13644">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13645">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13646">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13647">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13648">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13649">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13667">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13668">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13669">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13670">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13671">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13672">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13673">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13674">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13675">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13676">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13677">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13678">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13679">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13680">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13681">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13682">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13683">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13684">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13685">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13686">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13687">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13688">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13689">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13690">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13691">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13692">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13693">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13694">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13695">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13696">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13697">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13698">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13699">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13700">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13701">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13702">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13703">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13704">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13705">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13706">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13707">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13708">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13709">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13710">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13711">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13712">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13713">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13714">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13715">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13716">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13717">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13718">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13719">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13720">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13721">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13722">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13723">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13724">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13725">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13726">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13727">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13728">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13729">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13730">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13731">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13732">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13733">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13734">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13735">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13736">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13737">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13738">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13739">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13740">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13741">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13742">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13743">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13744">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13745">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13746">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13747">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13748">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13749">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13750">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13751">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13752">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13753">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13754">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13755">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13756">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13757">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13758">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13781">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13782">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13783">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13784">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13785">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13786">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13787">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13788">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13789">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13790">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13791">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13792">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13793">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13794">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13795">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13796">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13797">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13798">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13799">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13800">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13801">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13802">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13803">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13804">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13805">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13806">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13807">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13808">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13809">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13810">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13811">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13812">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13813">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13814">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13815">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13816">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13817">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13818">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13819">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13820">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13821">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13822">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13823">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13824">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13825">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13826">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13827">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13828">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13829">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13830">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13831">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13832">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13833">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13834">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13835">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13836">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13837">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13838">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13839">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13840">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13841">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13842">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13843">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13844">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13845">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13846">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13847">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13848">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13849">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13850">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13851">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13852">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13853">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13854">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13855">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13856">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13857">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13858">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13859">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13860">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13861">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13862">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13863">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13864">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13865">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13866">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13867">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13868">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13869">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13870">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13871">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13872">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13873">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13874">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13875">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13876">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13877">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13878">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13879">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13904">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13905">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13906">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13907">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13908">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13909">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13910">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13911">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13912">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13913">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13914">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13915">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13916">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13917">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13918">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13919">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13920">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13921">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13922">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13923">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13924">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13925">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13926">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13927">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13928">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13929">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13930">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13931">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13932">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13933">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13934">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13935">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13936">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13937">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13938">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13939">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13940">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13941">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13942">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13943">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13944">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13945">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13946">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13947">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13948">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13949">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13950">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13951">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13952">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13953">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13954">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13955">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13956">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13957">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13958">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13959">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13960">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13961">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13962">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13963">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13964">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13965">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13966">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13967">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13968">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13969">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13970">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13971">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13972">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13973">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13974">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13975">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13976">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13977">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13978">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13979">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13980">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13981">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13982">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13983">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13984">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13985">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13986">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13987">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13988">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13989">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13990">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13991">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13992">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13993">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13994">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="13995">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14010">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14011">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14012">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14013">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14014">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14015">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14016">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14017">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14018">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14019">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14020">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14021">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14022">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14023">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14024">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14025">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14026">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14027">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14028">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14029">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14030">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14031">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14032">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14033">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14034">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14035">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14036">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14037">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14038">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14039">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14040">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14041">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14042">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14043">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14044">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14045">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14046">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14047">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14048">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14049">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14050">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14051">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14052">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14053">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14054">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14055">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14056">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14057">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14058">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14059">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14060">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14061">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14062">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14063">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14064">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14065">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14066">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14067">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14068">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14069">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14070">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14071">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14072">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14073">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14074">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14075">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14076">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14077">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14078">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14079">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14080">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14081">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14082">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14083">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14084">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14085">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14086">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14087">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14088">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14089">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14090">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14091">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14092">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14093">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14094">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14095">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14096">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14097">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14098">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14099">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14100">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14101">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14102">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14103">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14104">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14105">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14106">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14107">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14108">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14109">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14110">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14111">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14112">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14113">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14114">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14115">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14126">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14127">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14128">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14129">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14130">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14131">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14132">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14133">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14134">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14135">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14136">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14137">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14138">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14139">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14140">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14141">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14142">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14143">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14144">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14145">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14146">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14147">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14148">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14149">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14150">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14151">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14152">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14153">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14154">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14155">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14156">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14157">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14158">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14159">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14160">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14161">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14162">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14163">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14164">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14165">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14166">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14167">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14168">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14169">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14170">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14171">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14172">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14173">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14174">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14175">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14176">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14177">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14178">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14179">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14180">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14181">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14182">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14183">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14184">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14185">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14186">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14187">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14188">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14189">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14190">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14191">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14192">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14193">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14194">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14195">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14196">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14197">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14198">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14199">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14200">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14201">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14202">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14203">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14204">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14205">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14206">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14207">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14208">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14209">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14210">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14211">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14212">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14213">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14214">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14215">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14216">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14217">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14218">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14219">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14220">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14221">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14222">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14223">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14224">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14225">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14226">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14227">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14228">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14229">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14230">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14231">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14232">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14246">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14247">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14248">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14249">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14250">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14251">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14252">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14253">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14254">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14255">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14256">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14257">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14258">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14259">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14260">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14261">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14262">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14263">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14264">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14265">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14266">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14267">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14268">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14269">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14270">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14271">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14272">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14273">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14274">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14275">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14276">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14277">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14278">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14279">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14280">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14281">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14282">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14283">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14284">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14285">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14286">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14287">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14288">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14289">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14290">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14291">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14292">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14293">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14294">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14295">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14296">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14297">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14298">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14299">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14300">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14301">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14302">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14303">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14304">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14305">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14306">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14307">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14308">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14309">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14310">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14311">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14312">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14313">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14314">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14315">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14316">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14317">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14318">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14319">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14320">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14321">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14322">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14323">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14324">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14325">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14326">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14327">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14328">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14329">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14330">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14331">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14332">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14333">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14334">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14335">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14336">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14337">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14338">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14339">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14340">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14341">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14342">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14356">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14357">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14358">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14359">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14360">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14361">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14362">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14363">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14364">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14365">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14366">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14367">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14368">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14369">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14370">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14371">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14372">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14373">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14374">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14375">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14376">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14377">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14378">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14379">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14380">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14381">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14382">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14383">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14384">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14385">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14386">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14387">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14388">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14389">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14390">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14391">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14392">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14393">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14394">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14395">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14396">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14397">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14398">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14399">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14400">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14401">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14402">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14403">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14404">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14405">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14406">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14407">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14408">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14409">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14410">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14411">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14412">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14413">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14414">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14415">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14416">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14417">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14418">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14419">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14420">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14421">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14422">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14423">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14424">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14425">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14426">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14427">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14428">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14429">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14430">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14431">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14432">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14433">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14434">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14435">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14436">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14437">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14438">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14452">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14453">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14454">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14455">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14456">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14457">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14458">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14459">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14460">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14461">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14462">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14463">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14464">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14465">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14466">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14467">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14468">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14469">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14470">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14471">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14472">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14473">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14474">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14475">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14476">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14477">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14478">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14479">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14480">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14481">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14482">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14483">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14484">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14485">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14486">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14487">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14488">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14489">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14490">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14491">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14492">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14493">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14494">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14495">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14496">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14497">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14498">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14499">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14500">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14501">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14502">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14503">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14504">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14505">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14506">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14507">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14508">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14509">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14510">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14511">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14512">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14513">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14514">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14515">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14516">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14517">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14518">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14519">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14520">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14521">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14522">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14523">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14524">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14525">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14526">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14527">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14528">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14529">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14530">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14531">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14532">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14533">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14534">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14535">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14536">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14537">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14538">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14539">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14558">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14559">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14560">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14561">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14562">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14563">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14564">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14565">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14566">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14567">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14568">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14569">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14570">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14571">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14572">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14573">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14574">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14575">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14576">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14577">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14578">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14579">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14580">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14581">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14582">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14583">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14584">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14585">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14586">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14587">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14588">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14589">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14590">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14591">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14592">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14593">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14594">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14595">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14596">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14597">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14598">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14599">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14600">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14601">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14602">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14603">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14604">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14605">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14606">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14607">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14608">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14609">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14610">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14611">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14612">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14613">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14614">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14615">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14616">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14617">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14618">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14619">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14620">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14621">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14622">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14623">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14624">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14625">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14626">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14627">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14628">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14629">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14630">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14631">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14632">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14633">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14634">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14635">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14636">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14637">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14638">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14639">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14640">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14641">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14642">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14643">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14644">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14645">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14646">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14647">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14648">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14649">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+			<Items Frame="14650">
+				<Items xsi:type="BoolAttribute" Name="Gestures" Value="true" />
+			</Items>
+		</ClipAttributes>
+	</ClipFile>
+</GestureBuilderFile>
