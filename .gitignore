@@ -324,3 +324,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
+
+# .xef
+Gesture/GestureModality/*.xef
