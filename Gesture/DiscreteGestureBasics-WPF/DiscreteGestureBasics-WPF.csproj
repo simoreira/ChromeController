@@ -125,6 +125,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="Database\Gesture.gbd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,11 +142,6 @@
     <Resource Include="Images\NotSeated.png" />
     <Resource Include="Images\NotTracked.png" />
     <Resource Include="Images\Seated.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database\Seated.gbd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

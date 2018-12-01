@@ -18,10 +18,21 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     public class GestureDetector : IDisposable
     {
         /// <summary> Path to the gesture database that was trained with VGB </summary>
-        private readonly string gestureDatabase = @"Database\Seated.gbd";
+        private readonly string gestureDatabase = @"Database\Gesture.gbd";
 
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
-        private readonly string seatedGestureName = "Seated";
+        private readonly string CloseChromeGesture_1 = "Close_1";
+        private readonly string CloseChromeGesture_2 = "Close_2";
+        private readonly string CloseTabGesture = "CloseTab";
+        private readonly string GoBackGesture = "GoBack";
+        private readonly string GoForwardGesture = "GoForward";
+        private readonly string MaximizeGesture = "Maximize";
+        private readonly string MinimizeGestue = "Minimize";
+        private readonly string RefreshGesture = "Refresh";
+        private readonly string ScrollDownGesture = "ScrollDown";
+        private readonly string ScrollUpGesture = "ScrollUp";
+        private readonly string ZoomInGesture = "ZoomIn";
+        private readonly string ZoomOutGesture = "ZoomOut";
 
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
         private VisualGestureBuilderFrameSource vgbFrameSource = null;
@@ -67,7 +78,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 // but for this program, we only want to track one discrete gesture from the database, so we'll load it by name
                 foreach (Gesture gesture in database.AvailableGestures)
                 {
-                    if (gesture.Name.Equals(this.seatedGestureName))
+                    if (gesture.Name.Equals(this.CloseChromeGesture_1) || gesture.Name.Equals(this.CloseChromeGesture_2) || 
+                        gesture.Name.Equals(this.CloseTabGesture) || gesture.Name.Equals(this.GoBackGesture) || gesture.Name.Equals(this.GoForwardGesture) ||
+                        gesture.Name.Equals(this.MinimizeGestue) || gesture.Name.Equals(this.MaximizeGesture) || gesture.Name.Equals(this.RefreshGesture) ||
+                        gesture.Name.Equals(this.ScrollDownGesture) || gesture.Name.Equals(this.ScrollUpGesture) || gesture.Name.Equals(this.ZoomInGesture) ||
+                        gesture.Name.Equals(this.ZoomOutGesture))
                     {
                         this.vgbFrameSource.AddGesture(gesture);
                     }
@@ -171,7 +186,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                         // we only have one gesture in this source object, but you can get multiple gestures
                         foreach (Gesture gesture in this.vgbFrameSource.Gestures)
                         {
-                            if (gesture.Name.Equals(this.seatedGestureName) && gesture.GestureType == GestureType.Discrete)
+                            if (gesture.GestureType == GestureType.Discrete)
                             {
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
@@ -198,5 +213,18 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             // update the GestureResultView object to show the 'Not Tracked' image in the UI
             this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
         }
+
+        
+        /*private void sendMessage(string gesture, double confidence)
+        {
+            string json = "{ \"recognized\": [";
+            json += "\"" + confidence + "\", ";
+            json += "\"" + gesture + "\", ";
+
+            //Complete
+
+        }
+        */
+         
     }
 }
