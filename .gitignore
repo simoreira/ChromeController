@@ -326,4 +326,4 @@ ASALocalRun/
 .mfractor/
 
 # .xef
-Gesture/GestureModality/*.xef
+Gesture/gestureModality_clips/*.xef
