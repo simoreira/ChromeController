@@ -83,35 +83,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             this.kinectBodyViewbox.DataContext = this.kinectBodyView;
 
             // create a gesture detector for each body (6 bodies => 6 detectors) and create content controls to display results in the UI
-            int col0Row = 0;
-            int col1Row = 0;
+
             int maxBodies = this.kinectSensor.BodyFrameSource.BodyCount;
             for (int i = 0; i < maxBodies; ++i)
             {
                 GestureResultView result = new GestureResultView(i, false, false, 0.0f);
                 GestureDetector detector = new GestureDetector(this.kinectSensor, result);
-                this.gestureDetectorList.Add(detector);                
-                
-                // split gesture results across the first two columns of the content grid
-                ContentControl contentControl = new ContentControl();
-                contentControl.Content = this.gestureDetectorList[i].GestureResultView;
-                
-                if (i % 2 == 0)
-                {
-                    // Gesture results for bodies: 0, 2, 4
-                    Grid.SetColumn(contentControl, 0);
-                    Grid.SetRow(contentControl, col0Row);
-                    ++col0Row;
-                }
-                else
-                {
-                    // Gesture results for bodies: 1, 3, 5
-                    Grid.SetColumn(contentControl, 1);
-                    Grid.SetRow(contentControl, col1Row);
-                    ++col1Row;
-                }
-
-                this.contentGrid.Children.Add(contentControl);
+                this.gestureDetectorList.Add(detector);
             }
         }
 
@@ -242,6 +220,16 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             // if the current body is tracked, unpause its detector to get VisualGestureBuilderFrameArrived events
                             // if the current body is not tracked, pause its detector so we don't waste resources trying to get invalid gesture results
                             this.gestureDetectorList[i].IsPaused = trackingId == 0;
+                        }
+                    }
+
+                    for(int i = 0; i<maxBodies; ++i)
+                    {
+                        String gesture = this.gestureDetectorList[i].getGesture();
+
+                        if(gesture != null)
+                        {
+                            gestWindow.Text = gesture;
                         }
                     }
                 }

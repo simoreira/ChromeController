@@ -23,7 +23,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private MmiCommunication mmic;
 
         /// <summary> Path to the gesture database that was trained with VGB </summary>
-        private readonly string gestureDatabase = @"Database\gestures.gbd";
+        private readonly string gestureDatabase = @"Database\gestosDiscretos.gbd";
 
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
 
@@ -37,6 +37,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private readonly string ZoomInGesture = "zoomIn";
         private readonly string ZoomOutGesture = "zoomOut";
 
+        private string currentGesture = "";
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
         private VisualGestureBuilderFrameSource vgbFrameSource = null;
 
@@ -188,66 +189,68 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                     {
                         foreach(Gesture gesture in vgbFrameSource.Gestures)
                         {
-                            if(gesture.Name.Equals(this.CloseTabGesture) || gesture.Name.Equals(this.GoBackGesture) || gesture.Name.Equals(this.GoForwardGesture))
+                            if(gesture.Name.Equals(this.CloseTabGesture) || gesture.Name.Equals(this.GoBackGesture) || gesture.Name.Equals(this.GoForwardGesture) || gesture.Name.Equals(this.ZoomInGesture) ||
+                                gesture.Name.Equals(this.ZoomOutGesture) || gesture.Name.Equals(this.ScrollDownGesture) || gesture.Name.Equals(this.ScrollUpGesture) || gesture.Name.Equals(this.RefreshGesture) ||
+                                gesture.Name.Equals(this.CloseChromeGesture))
                             {
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
 
                                 if(result != null)
                                 {
-                                    if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.CloseChromeGesture)))
+                                    if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.CloseChromeGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         sendMessage("QUIT_CHROME");
                                         Console.WriteLine("CloseChrome");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.4) && (gesture.Name.Equals(this.CloseTabGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.CloseTabGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("CloseTab");
                                         sendMessage("CLOSE_TAB");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.GoBackGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.GoBackGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("GoBack");
                                         sendMessage("BACK");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.GoForwardGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.GoForwardGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("GoForward");
                                         sendMessage("FORWARD");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.5) && (gesture.Name.Equals(this.ZoomInGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.ZoomInGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("ZoomIn");
                                         sendMessage("ZOOM_IN");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.5) && (gesture.Name.Equals(this.ZoomOutGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.ZoomOutGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("ZoomOut");
                                         sendMessage("ZOOM_OUT");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.RefreshGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.RefreshGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("Refresh");
                                         sendMessage("REFRESH");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.ScrollDownGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.ScrollDownGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("ScrollDown");
                                         sendMessage("SCROLL_DOWN");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
-                                    else if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.ScrollUpGesture)))
+                                    else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.ScrollUpGesture)))
                                     {
+                                        this.currentGesture = gesture.Name;
                                         Console.WriteLine("ScrollUp");
                                         sendMessage("SCROLL_UP");
-                                        System.Threading.Thread.Sleep(3000);
                                     }
                                 }
                             }
@@ -258,6 +261,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 }
             }
         }
+
+        public String getGesture() { return this.currentGesture; }
 
         /// <summary>
         /// Handles the TrackingIdLost event for the VisualGestureBuilderSource object
