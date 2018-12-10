@@ -82,6 +82,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             this.DataContext = this;
             this.kinectBodyViewbox.DataContext = this.kinectBodyView;
 
+
             // create a gesture detector for each body (6 bodies => 6 detectors) and create content controls to display results in the UI
 
             int maxBodies = this.kinectSensor.BodyFrameSource.BodyCount;
@@ -221,16 +222,26 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             // if the current body is not tracked, pause its detector so we don't waste resources trying to get invalid gesture results
                             this.gestureDetectorList[i].IsPaused = trackingId == 0;
                         }
-                    }
 
-                    for(int i = 0; i<maxBodies; ++i)
-                    {
                         String gesture = this.gestureDetectorList[i].getGesture();
 
-                        if(gesture != null)
+                        /*if (gesture != null)
                         {
                             gestWindow.Text = gesture;
-                        }
+                        }*/
+
+                        String confidence = this.gestureDetectorList[i].getConfidence();
+
+                        /*if(confidence != null)
+                        {
+                            label_confidence.Content = "Confidence: " + confidence;
+                        }*/
+
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            label_gesture.Content = "Gesture: " + gesture;
+                            label_conf.Content = "Conf: " + confidence;
+                        });
                     }
                 }
             }

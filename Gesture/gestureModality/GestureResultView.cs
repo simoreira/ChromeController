@@ -48,6 +48,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> True, if the body is currently being tracked </summary>
         private bool isTracked = false;
 
+        //private string gestureName = "";
+
         /// <summary>
         /// Initializes a new instance of the GestureResultView class and sets initial property values
         /// </summary>
@@ -62,6 +64,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             this.Detected = detected;
             this.Confidence = confidence;
             this.ImageSource = this.notTrackedImage;
+            //this.GestureName = gestureName;
         }
 
         /// <summary>
@@ -189,6 +192,23 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
+        /*public string GestureName
+        {
+            get
+            {
+                return this.gestureName;
+            }
+
+            private set
+            {
+                if( this.GestureName != value)
+                {
+                    this.gestureName = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }*/
+
         /// <summary>
         /// Updates the values associated with the discrete gesture detection result
         /// </summary>
@@ -215,6 +235,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 {
                     this.Confidence = detectionConfidence;
                     this.ImageSource = this.seatedImage;
+                    //this.GestureName = gestureName;
                 }
                 else
                 {

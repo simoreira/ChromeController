@@ -5,13 +5,19 @@
         Title="Discrete Gesture Basics"
         Height="650" Width="750"
         Closing="MainWindow_Closing">
-
-    <Grid Width="600" Height="500">
-        <StackPanel Orientation="Vertical" Grid.RowSpan="2">
-            <Viewbox x:Name="kinectBodyViewbox" VerticalAlignment="Top" Width="450" Height="450">
-                <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
-            </Viewbox>
-            <TextBox x:Name="gestWindow" HorizontalAlignment="Center" Height="35" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" FontSize="26" />
+    
+    <StackPanel Orientation="Vertical" Grid.RowSpan="2">
+        <Viewbox x:Name="kinectBodyViewbox" VerticalAlignment="Top" Width="450" Height="400">
+            <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
+        </Viewbox>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" Height="35" Margin="0,0,20,0" VerticalAlignment="Center" Width="170" FontSize="20"  Text="Gesture name:" />
+            <!--TextBox x:Name="gestWindow" HorizontalAlignment="Center" Height="35" Margin="0" VerticalAlignment="Center" Width="250" FontSize="20" /> -->
+            <Label x:Name="label_gesture" Content="Gesture: -" FontSize="14" BorderThickness="0" Width="248"></Label>
         </StackPanel>
-    </Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <!--<Label x:Name="label_confidence" Content="Confidence: -" FontSize="14" BorderThickness="0" Width="204"/> -->
+            <Label x:Name="label_conf" Content="Conf: -" FontSize="14" BorderThickness="0" Width="286"></Label>
+        </StackPanel>
+    </StackPanel>
 </Window>
