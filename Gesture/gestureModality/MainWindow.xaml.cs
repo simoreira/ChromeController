@@ -251,7 +251,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             this.Dispatcher.Invoke(() =>
             {
-                label_conf.Content = "Confidence: " + confidence + "%";
+                label_conf.Content = "Max confidence: " + confidence + "%";
             });
 
             if(confidenceTimer != null)

@@ -28,7 +28,7 @@ namespace AppGui
         private IJavaScriptExecutor js;
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
-        private String defaultUrl = "http://www.google.pt";
+        private String defaultUrl = "http://www.reddit.com";
         private Tts tts;
 
         public MainWindow()

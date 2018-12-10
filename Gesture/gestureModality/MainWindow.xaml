@@ -12,7 +12,7 @@
         </Viewbox>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
             <Label x:Name="label_gesture" Content="Gesture: -" FontSize="14" BorderThickness="0" Width="248"></Label>
-            <Label x:Name="label_conf" Content="Confidence: 0%" FontSize="14" Margin="-248, 30, 0 ,0" BorderThickness="0" Width="248"></Label>
+            <Label x:Name="label_conf" Content="Max confidence: 0%" FontSize="14" Margin="-248, 30, 0 ,0" BorderThickness="0" Width="248"></Label>
         </StackPanel>
     </StackPanel>
 </Window>
