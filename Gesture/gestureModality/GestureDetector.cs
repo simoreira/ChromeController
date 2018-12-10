@@ -12,6 +12,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     using Microsoft.Kinect;
     using Microsoft.Kinect.VisualGestureBuilder;
     using mmisharp;
+    using System.Timers;
 
     /// <summary>
     /// Gesture Detector class which listens for VisualGestureBuilderFrame events from the service
@@ -36,10 +37,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private readonly string zoomInGesture = "zoomIn";
         private readonly string zoomOutGesture = "zoomOut";
 
-        
-        private string currentGesture = "";
+
         private string gestureName = "";
-        private float confidence = 0.0f;
+        private float MaxConfidence = 0;
+        private MainWindow main;
+        private Timer MaxConfidenceTimer;
         //private bool gestureDetected = false;
 
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
@@ -53,11 +55,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// </summary>
         /// <param name="kinectSensor">Active sensor to initialize the VisualGestureBuilderFrameSource object with</param>
         /// <param name="gestureResultView">GestureResultView object to store gesture results of a single body to</param>
-        public GestureDetector(KinectSensor kinectSensor, GestureResultView gestureResultView)
+        public GestureDetector(KinectSensor kinectSensor, GestureResultView gestureResultView, MainWindow main)
         {
 
             this.GestureResultView = gestureResultView;
-
+            this.main = main;
             if (kinectSensor == null)
             {
                 throw new ArgumentNullException("kinectSensor");
@@ -171,6 +173,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
+        private void ResetConfidence(Object source, ElapsedEventArgs e)
+        {
+            MaxConfidence = 0;
+        }
+
         /// <summary>
         /// Handles gesture detection results arriving from the sensor for the associated body tracking Id
         /// </summary>
@@ -198,99 +205,98 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             {*/
                             DiscreteGestureResult result = null;
                             discreteResults.TryGetValue(gesture, out result);
-
-                            if(result != null)
+                            main.SetConfidence((MaxConfidence * 100).ToString("0.00"));
+                            if (result != null)
                             {
                                 if ((result.Confidence >= 0.5) && (gesture.Name.Equals(this.closeChromeGesture)) && (this.gestureName != this.closeChromeGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.closeChromeGesture;
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("QUIT_CHROME");
                                     Console.WriteLine("CloseChrome");
                                 }
                                 else if ((result.Confidence >= 0.5) && (gesture.Name.Equals(this.closeTabGesture)) && (this.gestureName != this.closeTabGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.closeTabGesture;
-                                    Console.WriteLine("CloseTab");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("CLOSE_TAB");
+                                    Console.WriteLine("CloseTab");
                                 }
                                 else if ((result.Confidence >= 0.5) && (gesture.Name.Equals(this.goBackGesture)) && (this.gestureName != this.goBackGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.goBackGesture;
-                                    Console.WriteLine("GoBack");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("BACK");
+                                    Console.WriteLine("GoBack");                                    
                                 }
                                 else if ((result.Confidence >= 0.3) && (gesture.Name.Equals(this.goForwardGesture)) && (this.gestureName != this.goForwardGesture))
                                 {
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.goForwardGesture;
-                                    Console.WriteLine("GoForward");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("FORWARD");
+                                    Console.WriteLine("GoForward");
                                 }
                                 else if ((result.Confidence >= 0.3) && (gesture.Name.Equals(this.zoomInGesture)) && (this.gestureName != this.zoomInGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.zoomInGesture;
-                                    Console.WriteLine("ZoomIn");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("ZOOM_IN");
+                                    Console.WriteLine("ZoomIn");
                                 }
                                 else if ((result.Confidence >= 0.3) && (gesture.Name.Equals(this.zoomOutGesture)) && (this.gestureName != this.zoomOutGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.zoomOutGesture;
-                                    Console.WriteLine("ZoomOut");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("ZOOM_OUT");
+                                    Console.WriteLine("ZoomOut");
                                 }
                                 else if ((result.Confidence >= 0.7) && (gesture.Name.Equals(this.refreshGesture)) && (this.gestureName != this.refreshGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.refreshGesture;
-                                    Console.WriteLine("Refresh");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("REFRESH");
+                                    Console.WriteLine("Refresh");
                                 }
                                 else if ((result.Confidence >= 0.4) && (gesture.Name.Equals(this.scrollDownGesture)) && (this.gestureName != this.scrollDownGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.scrollDownGesture;
-                                    Console.WriteLine("ScrollDown");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("SCROLL_DOWN");
+                                    Console.WriteLine("ScrollDown");
                                 }
                                 else if ((result.Confidence >= 0.5) && (gesture.Name.Equals(this.scrollUpGesture)) && (this.gestureName != this.scrollUpGesture))
                                 {
-                                    this.confidence = result.Confidence;
-                                    this.currentGesture = gesture.Name;
                                     this.gestureName = this.scrollUpGesture;
-                                    Console.WriteLine("ScrollUp");
+                                    MaxConfidence = result.Confidence;
+                                    main.SetGesture(gesture.Name);
                                     sendMessage("SCROLL_UP");
+                                    Console.WriteLine("ScrollUp");
                                 }
-                            }
 
-                            //this.GestureResultView.UpdateGestureResult(true, true, result.Confidence, this.currentGesture);
+                                if(MaxConfidenceTimer != null)
+                                {
+                                    MaxConfidenceTimer.Stop();
+                                }
+
+                                MaxConfidenceTimer = new Timer(2 * 1000);
+                                MaxConfidenceTimer.Elapsed += ResetConfidence;
+                                MaxConfidenceTimer.AutoReset = false;
+                                MaxConfidenceTimer.Enabled = true;
+                            }
                         }
                     }
                     
                     
                 }
             }
-        }
-
-        public String getGesture()
-        {
-            return this.currentGesture;
-        }
-
-        public String getConfidence()
-        {
-            return this.confidence.ToString();
         }
 
         /// <summary>
@@ -303,7 +309,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             // update the GestureResultView object to show the 'Not Tracked' image in the UI
             this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
         }
-
         
         private void sendMessage(string gesture)
         {

@@ -11,13 +11,8 @@
             <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
         </Viewbox>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" Height="35" Margin="0,0,20,0" VerticalAlignment="Center" Width="170" FontSize="20"  Text="Gesture name:" />
-            <!--TextBox x:Name="gestWindow" HorizontalAlignment="Center" Height="35" Margin="0" VerticalAlignment="Center" Width="250" FontSize="20" /> -->
             <Label x:Name="label_gesture" Content="Gesture: -" FontSize="14" BorderThickness="0" Width="248"></Label>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <!--<Label x:Name="label_confidence" Content="Confidence: -" FontSize="14" BorderThickness="0" Width="204"/> -->
-            <Label x:Name="label_conf" Content="Conf: -" FontSize="14" BorderThickness="0" Width="286"></Label>
+            <Label x:Name="label_conf" Content="Confidence: 0%" FontSize="14" Margin="-248, 30, 0 ,0" BorderThickness="0" Width="248"></Label>
         </StackPanel>
     </StackPanel>
 </Window>

@@ -17,6 +17,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
+    using System.Timers;
     using System.Windows;
     using System.Windows.Controls;
     using Microsoft.Kinect;
@@ -45,11 +46,15 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> List of gesture detectors, there will be one detector created for each potential body (max of 6) </summary>
         private List<GestureDetector> gestureDetectorList = null;
 
+        private Timer gestureTimer;
+        private Timer confidenceTimer;
+        private MainWindow main;
         /// <summary>
         /// Initializes a new instance of the MainWindow class
         /// </summary>
         public MainWindow()
         {
+            main = this;
             // only one sensor is currently supported
             this.kinectSensor = KinectSensor.GetDefault();
             
@@ -89,7 +94,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             for (int i = 0; i < maxBodies; ++i)
             {
                 GestureResultView result = new GestureResultView(i, false, false, 0.0f);
-                GestureDetector detector = new GestureDetector(this.kinectSensor, result);
+                GestureDetector detector = new GestureDetector(this.kinectSensor, result, main);
                 this.gestureDetectorList.Add(detector);
             }
         }
@@ -222,29 +227,63 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             // if the current body is not tracked, pause its detector so we don't waste resources trying to get invalid gesture results
                             this.gestureDetectorList[i].IsPaused = trackingId == 0;
                         }
-
-                        String gesture = this.gestureDetectorList[i].getGesture();
-
-                        /*if (gesture != null)
-                        {
-                            gestWindow.Text = gesture;
-                        }*/
-
-                        String confidence = this.gestureDetectorList[i].getConfidence();
-
-                        /*if(confidence != null)
-                        {
-                            label_confidence.Content = "Confidence: " + confidence;
-                        }*/
-
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            label_gesture.Content = "Gesture: " + gesture;
-                            label_conf.Content = "Conf: " + confidence;
-                        });
                     }
                 }
             }
         }
+        private void GestureEnd(Object source, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                label_gesture.Content = "Gesture: -";
+            });
+        }
+
+        private void ResetConfidence(Object source, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                label_conf.Content = "Confidence: 0.00%";
+            });
+        }
+
+        public void SetConfidence(string confidence)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                label_conf.Content = "Confidence: " + confidence + "%";
+            });
+
+            if(confidenceTimer != null)
+            {
+                confidenceTimer.Stop();
+            }
+
+            confidenceTimer = new Timer(2 * 1000);
+            confidenceTimer.Elapsed += ResetConfidence;
+            confidenceTimer.AutoReset = false;
+            confidenceTimer.Enabled = true;
+        }
+
+        public void SetGesture(string gestureName)
+        {
+            if(gestureTimer != null)
+            {
+                gestureTimer.Stop();
+            }
+
+            gestureTimer = new Timer(1 * 1000);
+            gestureTimer.Elapsed += GestureEnd;
+            gestureTimer.AutoReset = false;
+            gestureTimer.Enabled = true;
+
+            this.Dispatcher.Invoke(() => 
+            {
+                label_gesture.Content = "Gesture: " + gestureName;
+            });
+        }
     }
+
+
+    
 }
