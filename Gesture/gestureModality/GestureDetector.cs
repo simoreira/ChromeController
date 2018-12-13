@@ -183,6 +183,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// </summary>
         /// <param name="sender">object sending the event</param>
         /// <param name="e">event arguments</param>
+        /// 
+        int zoomInQuantity = 0;
+        int zoomOutQuantity = 0;
+        int scrollUpQuantity = 0;
+        int scrollDownQuantity = 0;
         private void Reader_GestureFrameArrived(object sender, VisualGestureBuilderFrameArrivedEventArgs e)
         {
             //float progress = 0;
@@ -230,7 +235,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     MaxConfidence = result.Confidence;
                                     main.SetGesture(gesture.Name);
                                     sendMessage("BACK");
-                                    Console.WriteLine("GoBack");                                    
+                                    Console.WriteLine("GoBack");
+                                    zoomInQuantity = 0;
+                                    zoomOutQuantity = 0;
+                                    scrollUpQuantity = 0;
+                                    scrollDownQuantity = 0;
                                 }
                                 else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.goForwardGesture)) && (this.gestureName != this.goForwardGesture))
                                 {
@@ -239,13 +248,24 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     main.SetGesture(gesture.Name);
                                     sendMessage("FORWARD");
                                     Console.WriteLine("GoForward");
+                                    zoomInQuantity = 0;
+                                    zoomOutQuantity = 0;
+                                    scrollUpQuantity = 0;
+                                    scrollDownQuantity = 0;
                                 }
                                 else if ((result.Confidence >= 0.3) && (gesture.Name.Equals(this.zoomInGesture)))
                                 {
                                     this.gestureName = this.zoomInGesture;
                                     MaxConfidence = result.Confidence;
                                     main.SetGesture(gesture.Name);
-                                    sendMessage("ZOOM_IN");
+                                    if (zoomInQuantity <= 5)
+                                    {
+                                        sendMessage("ZOOM_IN");
+                                        zoomInQuantity++;
+                                    }
+                                    zoomOutQuantity = 0;
+                                    scrollUpQuantity = 0;
+                                    scrollDownQuantity = 0;
                                     Console.WriteLine("ZoomIn");
                                 }
                                 else if ((result.Confidence >= 0.3) && (gesture.Name.Equals(this.zoomOutGesture)))
@@ -253,7 +273,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     this.gestureName = this.zoomOutGesture;
                                     MaxConfidence = result.Confidence;
                                     main.SetGesture(gesture.Name);
-                                    sendMessage("ZOOM_OUT");
+                                    if (zoomOutQuantity <= 5)
+                                    {
+                                        sendMessage("ZOOM_OUT");
+                                        zoomOutQuantity++;
+                                    }
+                                    zoomInQuantity = 0;
+                                    scrollUpQuantity = 0;
+                                    scrollDownQuantity = 0;
                                     Console.WriteLine("ZoomOut");
                                 }
                                 else if ((result.Confidence >= 0.6) && (gesture.Name.Equals(this.refreshGesture)) && (this.gestureName != this.refreshGesture))
@@ -263,21 +290,41 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     main.SetGesture(gesture.Name);
                                     sendMessage("REFRESH");
                                     Console.WriteLine("Refresh");
+                                    zoomInQuantity = 0;
+                                    zoomOutQuantity = 0;
+                                    scrollUpQuantity = 0;
+                                    scrollDownQuantity = 0;
                                 }
-                                else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.scrollDownGesture)) && (this.gestureName != this.scrollDownGesture))
+                                else if ((result.Confidence >= 0.2) && (gesture.Name.Equals(this.scrollDownGesture)))
                                 {
                                     this.gestureName = this.scrollDownGesture;
                                     MaxConfidence = result.Confidence;
                                     main.SetGesture(gesture.Name);
-                                    sendMessage("SCROLL_DOWN");
+                                    if (scrollDownQuantity <= 5)
+                                    {
+                                        sendMessage("SCROLL_DOWN");
+                                        scrollDownQuantity++;
+                                    }
+                                    zoomInQuantity = 0;
+                                    zoomOutQuantity = 0;
+                                    scrollUpQuantity = 0;
+
                                     Console.WriteLine("ScrollDown");
                                 }
-                                else if ((result.Confidence >= 0.4) && (gesture.Name.Equals(this.scrollUpGesture)) && (this.gestureName != this.scrollUpGesture))
+                                else if ((result.Confidence >= 0.4) && (gesture.Name.Equals(this.scrollUpGesture)))
                                 {
                                     this.gestureName = this.scrollUpGesture;
                                     MaxConfidence = result.Confidence;
                                     main.SetGesture(gesture.Name);
-                                    sendMessage("SCROLL_UP");
+                                    if (scrollUpQuantity <= 5)
+                                    {
+                                        sendMessage("SCROLL_UP");
+                                        scrollUpQuantity++;
+                                    }
+                                    zoomInQuantity = 0;
+                                    zoomOutQuantity = 0;
+                                    scrollDownQuantity = 0;
+
                                     Console.WriteLine("ScrollUp");
                                 }
 
