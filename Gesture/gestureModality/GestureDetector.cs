@@ -72,7 +72,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
             //Init lifeCycleEvents
             lce = new LifeCycleEvents("ASR", "IM", "gestures-1", "acoustic", "command"); // LifeCycleEvents(string source, string target, string id, string medium, string mode)
-            mmic = new MmiCommunication("localhost", 8000, "User1", "ASR"); // MmiCommunication(string IMhost, int portIM, string UserOD, string thisModalityName)
+            mmic = new MmiCommunication("localhost", 9876, "User1", "ASR"); // MmiCommunication(string IMhost, int portIM, string UserOD, string thisModalityName)
             mmic.Send(lce.NewContextRequest());
             
             // create the vgb source. The associated body tracking ID will be set when a valid body frame arrives from the sensor.

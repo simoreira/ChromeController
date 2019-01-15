@@ -1,0 +1,10 @@
+[action][REFRESH]
+[quantity][A_LOT]
+[action][ZOOM_IN]
+[quantity][A_BIT]
+[action][SCROLL_UP
+[action][GO_BACK]
+[action][SCROLL_DOWN]
+[action][NEW_TAB]
+[action][ZOOM_OUT]
+[action][GO_FORWARD]

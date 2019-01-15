@@ -81,7 +81,7 @@
     </one-of>
     <tag>out.maximize="MAXIMIZE";</tag>
   </rule>
-  
+
   <rule id="goBack">
     <item>
       <item>vai para</item>
@@ -102,7 +102,7 @@
       <tag>out.goForward="FORWARD";</tag>
     </item>
   </rule>
-  
+
   <rule id="yesOrNo">
     <item>
       <one-of>
