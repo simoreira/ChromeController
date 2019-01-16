@@ -22,13 +22,11 @@ namespace AppGui
     {
         private MmiCommunication mmiC;
         private double ZoomValue = 100;
-        private double ZoomIncrement = 10;
-        private int scrollIncrement = 200;
         private IWebDriver driver;
         private IJavaScriptExecutor js;
         private ArrayList tabs = new ArrayList();
         private int tabCounter = 1;
-        private String defaultUrl = "http://www.reddit.com";
+        private String defaultUrl = "http://www.google.com";
         private Tts tts;
 
         public MainWindow()
@@ -138,15 +136,15 @@ namespace AppGui
             return "tab" + tabCounter;
         }
 
-        private void ZoomIn()
+        private void ZoomIn(int increment)
         {
-            ZoomValue += ZoomIncrement;
+            ZoomValue += increment;
             Zoom(ZoomValue);
         }
 
-        private void ZoomOut()
+        private void ZoomOut(int decrement)
         {
-            ZoomValue -= ZoomIncrement;
+            ZoomValue -= decrement;
             Zoom(ZoomValue);
         }
 
@@ -234,14 +232,14 @@ namespace AppGui
             }
             actions.MoveToElement(searchButton).Click().Perform();
         }
-        private void ScrollDown()
+        private void ScrollDown(int increment)
         {
-            js.ExecuteScript(String.Format("window.scrollBy(0,{0});", scrollIncrement));
+            js.ExecuteScript(String.Format("window.scrollBy(0,{0});", increment));
         }
 
-        private void ScrollUp()
+        private void ScrollUp(int increment)
         {
-            js.ExecuteScript(String.Format("window.scrollBy(0,{0})", -scrollIncrement));
+            js.ExecuteScript(String.Format("window.scrollBy(0,{0})", -increment));
         }
 
         private void ScrollTop()
@@ -254,6 +252,7 @@ namespace AppGui
             js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
         }
 
+        String lastCall = "";
         private void MmiC_Message(object sender, MmiEventArgs e)
         {
             Console.WriteLine(e.Message);
@@ -264,58 +263,92 @@ namespace AppGui
             switch ((string)json.recognized[0].ToString())
             {
                 case "FIND_IN_PAGE":
+                    lastCall = "FIND_IN_PAGE";
                     SearchTextInPage((string)json.recognized[1].ToString());
                     break;
                 case "SYNONYMS":
+                    lastCall = "SYNONYMS";
                     searchSynonyms((string)json.recognized[1].ToString());
                     break;
                 case "SEARCH_QUERY":
+                    lastCall = "SEARCH_QUERY";
                     Search((string)json.recognized[1].ToString() + " " + (string)json.recognized[2].ToString() + " " +(string)json.recognized[3].ToString());
                     break;
                 case "MINIMIZE":
+                    lastCall = "MINIMIZE";
                     Minimize();
                     break;
                 case "MAXIMIZE":
+                    lastCall = "MAXIMIZE";
                     Maximize();
                     break;
                 case "BACK":
+                    lastCall = "BACK";
                     GoBack();
                     break;
                 case "FORWARD":
+                    lastCall = "FORWARD";
                     GoForward();
                     break;
                 case "QUIT_CHROME":
+                    lastCall = "QUIT_CHROME";
                     QuitChrome();
                     break;
                 case "CLOSE_TAB":
+                    lastCall = "CLOSE_TAB";
                     CloseTab();
                     break;
                 case "REFRESH":
+                    lastCall = "REFRESH";
                     Refresh();
                     break;
                 case "ZOOM_IN":
-                    ZoomIn();
+                    lastCall = "ZOOM_IN";
                     break;
                 case "ZOOM_OUT":
-                    ZoomOut();
+                    lastCall = "ZOOM_OUT";
                     break;
                 case "SCROLL_UP":
-                    ScrollUp();
+                    lastCall = "SCROLL_UP";
                     break;
                 case "SCROLL_DOWN":
-                    ScrollDown();
+                    lastCall = "SCROLL_DOWN";
                     break;
                 case "OPEN_SETTINGS":
+                    lastCall = "OPEN_SETTINGS";
                     OpenSettings();
                     break;
                 case "OPEN_DOWNLOADS":
+                    lastCall = "OPEN_DOWNLOADS";
                     OpenDownloads();
                     break;
                 case "OPEN_TAB":
+                    lastCall = "OPEN_TAB";
                     NewTab(TabName(), defaultUrl);
                     break;
                 case "OPEN_INCOGNITO":
+                    lastCall = "OPEN_INCOGNITO";
                     OpenIncognitoTab();
+                    break;
+                case "A_BIT":
+                    if (lastCall == "ZOOM_IN")
+                        ZoomIn(2);
+                    if (lastCall == "ZOOM_OUT")
+                        ZoomOut(2);
+                    if (lastCall == "SCROLL_UP")
+                        ScrollUp(200);
+                    if (lastCall == "SCROLL_DOWN")
+                        ScrollDown(200);
+                    break;
+                case "A_LOT":
+                    if (lastCall == "ZOOM_IN")
+                        ZoomIn(10);
+                    if (lastCall == "ZOOM_OUT")
+                        ZoomOut(10);
+                    if (lastCall == "SCROLL_UP")
+                        ScrollUp(400);
+                    if (lastCall == "SCROLL_DOWN")
+                        ScrollDown(400);
                     break;
             }
         }

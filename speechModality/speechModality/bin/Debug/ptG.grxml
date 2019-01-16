@@ -57,9 +57,39 @@
       <item>
         <ruleref uri="#zoom"/>
       </item>
+      <item>
+        <ruleref uri="#aBit"></ruleref>
+      </item>
+      <item>
+        <ruleref uri="#aLot"></ruleref>
+      </item>
     </one-of>
   </rule>
-
+  
+  <rule id="aBit">
+    <item>
+      <one-of>
+        <item>um pouco</item>
+        <item>um pouco de</item>
+        <item>pouco</item>
+        <item>menos</item>
+        <item>diminui um pouco</item>
+      </one-of>
+     </item>
+    <tag>out.aBit="A_BIT";</tag>
+  </rule>
+  
+  <rule id="aLot">
+    <item>
+      <one-of>
+        <item>muito</item>
+        <item>mais</item>
+        <item>aumenta muito</item>
+      </one-of>
+    </item>
+    <tag>out.aLot="A_LOT";</tag>
+  </rule>
+  
   <rule id="minimize">
     <item>
       <one-of>
